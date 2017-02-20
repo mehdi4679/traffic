@@ -1,0 +1,630 @@
+﻿/* Tables CSS*/
+.tbl_Managers
+{
+    width:100%;
+    background-color:White;
+    direction:rtl;
+    }
+.tbl_Students
+{
+    width:100%;
+    background-color:White;
+    direction:rtl;
+    
+    }
+    
+.background
+{
+    background-image: url('Images/Access.png');
+}
+/* Text & Headers CSS*/
+.lbl
+{   
+     color:Green;
+     font-weight:bolder;
+    }
+.title
+{
+    
+    color:Blue  ;
+    font-weight:bolder;
+    }
+
+.alert
+{
+    color:Red;
+    font-weight:bolder;
+}
+
+/* Links CSS*/
+.AStatus
+{
+        background-image: url(images/status.png);
+    cursor: pointer;
+    display:inline-block;
+width:24px;
+height:24px;
+}
+.AUsers
+{
+background-image: url(images/Users.png);
+cursor: pointer;
+display:inline-block;
+width:24px;
+height:24px;
+}
+.ASchool
+{
+background-image: url(images/School.png);
+cursor: pointer;
+display:inline-block;
+width:24px;
+height:24px;
+}
+    .APass
+{
+    background-image: url(images/Pass.png);
+    cursor: pointer;
+    display:inline-block;
+width:24px;
+height:24px;
+
+    }
+        .AGroup
+{
+    background-image: url(images/group.jpg);
+    cursor: pointer;
+    display:inline-block;
+width:24px;
+height:24px;
+
+    }
+    .AAccess
+{
+        background-image: url(images/Access.png);
+    cursor: pointer;
+    display:inline-block;
+width:24px;
+height:24px;
+
+    }
+.ADelete
+{
+        background-image: url(images/delete.png);
+    cursor: pointer;
+    display:inline-block;
+width:24px;
+height:24px;
+
+    }
+.APelak
+{
+        background-image: url(images/icon50.png);
+    cursor: pointer;
+    display:inline-block;
+width:24px;
+height:24px;
+
+    }
+ .AClose
+{
+        background-image: url(images/x.png);
+    cursor: pointer;
+    display:inline-block;
+width:24px;
+height:24px;
+
+    }   
+ .AEnter
+{
+        background-image: url(images/My-Documents.png);
+    cursor: pointer;
+    display:inline-block;
+width:24px;
+height:24px;
+
+    }   
+ .ADoc
+{
+        background-image: url(images/My-Documents.png);
+     cursor: pointer;
+    display:inline-block; 
+width:24px;
+height:24px;
+
+    }
+  .APass
+{
+        background-image: url(images/Pass.png);
+    cursor: pointer;
+    display:inline-block;
+width:24px;
+height:24px;
+
+    }    
+  .Acredit
+{
+        background-image: url(images/coint.jpg);
+    cursor: pointer;
+    display:inline-block;
+width:24px;
+height:24px;
+
+    } 
+      .AcreditUnDirect
+{
+        background-image: url(images/Dollar-icon.png);
+    cursor: pointer;
+    display:inline-block;
+width:24px;
+height:24px;
+
+    }             
+    .AEdit
+{
+        background-image: url(images/edit.png);
+    cursor: pointer;
+    display:inline-block;
+width:24px;
+height:24px;
+
+
+    }
+        .ABackup
+    {
+             background-image: url(../../images/backup2.png);
+    cursor: pointer;
+    display:inline-block;
+width:24px;
+height:24px;   
+        }  
+         .ADownLoadd
+    {
+             background-image: url(../../images/download.png);
+    cursor: pointer;
+    display:inline-block;
+width:24px;
+height:24px;   
+        }  
+    .ASetting
+{
+        background-image: url(images/Settings.png);
+    cursor: pointer;
+    display:inline-block;
+width:24px;
+height:24px;
+
+    }
+    .AGo
+    {
+        background-image: url(images/go.png);
+        cursor: pointer;
+       display:inline-block;
+       width:24px;
+       height:24px; 
+      background-repeat:no-repeat;
+    }
+    
+    .AEdit
+    {
+        
+    cursor: pointer;
+    display:inline-block;
+   width:24px;
+     height:24px; 
+     background-image:url(images/edit.png);
+     
+    }
+     .ATrue
+    {
+        
+    cursor: pointer;
+    display:inline-block;
+   width:24px;
+     height:24px; 
+     background-image:url(images/true.gif);
+     background-repeat:no-repeat
+     
+    }
+    
+      .ASelect
+    {
+        
+    cursor: pointer;
+    display:inline-block;
+   width:24px;
+     height:24px; 
+     background-image:url(images/select.jpg);
+     background-repeat:no-repeat
+     
+    }
+    
+    .IMGframe01
+{    
+    
+    
+    width:100%;
+     
+     background-image:url(Images/Item/Item_07.png);
+    
+   
+  
+}
+    
+        .ACancel2
+    {
+        
+    cursor: pointer;
+    display:inline-block;
+   width:24px;
+     height:24px; 
+     background-image:url(images/cancel.jpg);
+       background-repeat:no-repeat
+    }
+        .Document
+    {
+        
+    cursor: pointer;
+    display:inline-block;
+   width:24px;
+     height:24px; 
+     background-image:url(images/My-Documents.png);
+       background-repeat:no-repeat
+    } 
+    
+            .ADarkOk
+    {
+        
+    cursor: pointer;
+    display:inline-block;
+   width:24px;
+     height:24px; 
+     background-image:url(images/darkok.jpg);
+       background-repeat:no-repeat
+    }
+    
+    
+    
+       .AFalse
+    {
+        
+    cursor: pointer;
+    display:inline-block;
+   width:24px;
+     height:24px; 
+     background-image:url(images/false.gif);
+       background-repeat:no-repeat
+    }
+    
+    
+    .AEdited
+    {
+         background-image:url(images/true.gif);
+         cursor: pointer;
+    display:inline-block;
+    width :24px;
+     height:24px; 
+     background-repeat:no-repeat;
+         
+        }
+.ACancel
+{
+        background-image: url(images/cancel.png);
+    cursor: pointer;
+    display:inline-block;
+width:24px;
+height:24px;
+
+    }
+    .AStop
+    {
+         background-image:url(images/stop.jpg);
+         cursor: pointer;
+    display:inline-block;
+   width:24px;
+     height:24px; 
+      background-repeat:no-repeat;
+        }
+.ASearch
+{
+        background-image: url(images/icon_search.jpg);
+        background-repeat:no-repeat;
+    cursor: pointer;
+    display:inline-block;    
+width:32px;
+height:32px;
+
+    }
+
+.AAdd
+{
+        background-image: url(images/add.jpg);
+    cursor: pointer;
+    display:inline-block;
+width:32px;
+height:32px;
+
+    }
+     
+    .ASave
+{
+   background-image: url(images/save.png);
+   cursor: pointer;
+   display:inline-block;
+width:32px;
+height:32px;
+
+    }
+     
+
+/* Grid View CSS*/
+.gridview
+{
+    font-family: Tahoma;
+    background-color: #FFFFFF;
+    font-size: small;
+}
+.gridview th {
+        background: #6666FF;
+        padding: 5px;
+        font-size:small;
+
+}
+.gridview th a{
+        color: #003366;
+        text-decoration: none;
+}
+.gridview th:hover{
+        color: #003300;
+        text-decoration: underline;
+    background-color:Black ; 
+        
+}
+.gridview td  {
+        /*background: #D9EDC9;*/
+        color: #333333;
+        font: small "arial";
+        padding: 4px;
+}
+.gridview tr.even td 
+{
+            /* background: red;*/
+}
+
+.gridview tr.even tr:hover
+{
+            background: yellow !important;
+            background-color:Gray !important;
+}
+
+
+ 
+.gridview tr:hover {
+        color: red;
+        font-weight: bold;
+           background:yellow; 
+        background-color:Gray !important;
+        cursor: pointer;
+}
+/*------------ btn ----------*/
+.hbtn-Report_r
+{
+    border-top: solid 1px #dddddd;
+    border-left: solid 1px #dddddd;
+    border-bottom: solid 1px #aaaaaa;
+    border-right: solid 1px #aaaaaa;
+    background-image: url(images/hbtn-Report-r.jpg);
+    background-position: right;
+    color: #434448;
+    padding-right: 25px;
+    padding-left: 20px;
+    height: 30px;
+    margin: 2px;
+    cursor: pointer;
+}
+.hbtn-Report_r:hover
+{
+    border-top: solid 1px #989898;
+    border-left: solid 1px #989898;
+    border-bottom: solid 1px #989898;
+    border-right: solid 1px #989898;
+    color: #1d1e25;
+}
+.hbtn-back-r
+{
+    border-top: solid 1px #dddddd;
+    border-left: solid 1px #dddddd;
+    border-bottom: solid 1px #aaaaaa;
+    border-right: solid 1px #aaaaaa;
+    background-image: url(images/hbtn-back-r.jpg);
+    background-position: right;
+    color: #434448;
+    padding-right: 25px;
+    padding-left: 20px;
+    height: 30px;
+    margin: 2px;
+    cursor: pointer;
+}
+.hbtn-back-r:hover
+{
+    border-top: solid 1px #989898;
+    border-left: solid 1px #989898;
+    border-bottom: solid 1px #989898;
+    border-right: solid 1px #989898;
+    color: #1d1e25;
+}
+.hbtn-search-r
+{
+    border-top: solid 1px #dddddd;
+    border-left: solid 1px #dddddd;
+    border-bottom: solid 1px #aaaaaa;
+    border-right: solid 1px #aaaaaa;
+    background-image: url(images/hbtn-search-r.jpg);
+    background-position: right;
+    color: #434448;
+    padding-right: 25px;
+    padding-left: 20px;
+    height: 30px;
+    margin: 2px;
+    cursor: pointer;
+}
+.hbtn-search-r:hover
+{
+    border-top: solid 1px #989898;
+    border-left: solid 1px #989898;
+    border-bottom: solid 1px #989898;
+    border-right: solid 1px #989898;
+    color: #1d1e25;
+    background-repeat:no-repeat 
+}
+.hbtn-add-r
+{
+    border-top: solid 1px #dddddd;
+    border-left: solid 1px #dddddd;
+    border-bottom: solid 1px #aaaaaa;
+    border-right: solid 1px #aaaaaa;
+    background-image: url(images/hbtn-add-r.jpg);
+    background-position: right;
+    color: #434448;
+    padding-right: 25px;
+    padding-left: 20px;
+    height: 30px;
+    margin: 2px;
+    cursor: pointer;
+   
+}
+.hbtn-add-r:hover
+{
+    border-top: solid 1px #989898;
+    border-left: solid 1px #989898;
+    border-bottom: solid 1px #989898;
+    border-right: solid 1px #989898;
+    color: #1d1e25;
+}
+.hbtn-delete-r
+{
+    border-top: solid 1px #dddddd;
+    border-left: solid 1px #dddddd;
+    border-bottom: solid 1px #aaaaaa;
+    border-right: solid 1px #aaaaaa;
+    background-image: url(images/hbtn-delete-r.jpg);
+    background-position: right;
+    color: #434448;
+    padding-right: 25px;
+    padding-left: 20px;
+    height: 30px;
+    margin: 2px;
+    cursor: pointer;
+}
+.hbtn-delete-r:hover
+{
+    border-top: solid 1px #989898;
+    border-left: solid 1px #989898;
+    border-bottom: solid 1px #989898;
+    border-right: solid 1px #989898;
+    color: #1d1e25;
+}
+.hbtn-ok-r
+{
+    border-top: solid 1px #dddddd;
+    border-left: solid 1px #dddddd;
+    border-bottom: solid 1px #aaaaaa;
+    border-right: solid 1px #aaaaaa;
+    background-image: url(images/hbtn-ok-r.jpg);
+    background-position: right;
+    color: #434448;
+    padding-right: 25px;
+    padding-left: 20px;
+    height: 30px;
+    margin: 2px;
+    cursor: pointer;
+}
+.hbtn-ok-r:hover
+{
+    border-top: solid 1px #989898;
+    border-left: solid 1px #989898;
+    border-bottom: solid 1px #989898;
+    border-right: solid 1px #989898;
+    color: #1d1e25;
+}
+.hbtn-stop-r
+{
+    border-top: solid 1px #dddddd;
+    border-left: solid 1px #dddddd;
+    border-bottom: solid 1px #aaaaaa;
+    border-right: solid 1px #aaaaaa;
+    background-image: url(images/stop.jpg);
+    background-position: right;
+    background-repeat:no-repeat;
+    color: #434448;
+    padding-right: 25px;
+    padding-left: 20px;
+    height: 30px;
+    margin: 2px;
+    cursor: pointer;
+    text-align:left;
+}
+.hbtn-stop-r:hover
+{
+    border-top: solid 1px #989898;
+    border-left: solid 1px #989898;
+    border-bottom: solid 1px #989898;
+    border-right: solid 1px #989898;
+    color: #1d1e25;
+}
+.hbtn-print-r
+{
+    border-top: solid 1px #dddddd;
+    border-left: solid 1px #dddddd;
+    border-bottom: solid 1px #aaaaaa;
+    border-right: solid 1px #aaaaaa;
+    background-image: url(images/hbtn-print-r.jpg);
+    background-position: right;
+    color: #434448;
+    padding-right: 25px;
+    padding-left: 20px;
+    height: 30px;
+    margin: 2px;
+    cursor: pointer;
+}
+.hbtn-print-r:hover
+{
+    border-top: solid 1px #989898;
+    border-left: solid 1px #989898;
+    border-bottom: solid 1px #989898;
+    border-right: solid 1px #989898;
+    color: #1d1e25;
+}
+
+.hbtn-blank
+{
+    border-top: solid 1px #dddddd;
+    border-left: solid 1px #dddddd;
+    border-bottom: solid 1px #aaaaaa;
+    border-right: solid 1px #aaaaaa;
+    background-image: url(images/hbtn-blank.jpg);
+    background-position: right;
+    color: #434448;
+    padding-right: 25px;
+    padding-left: 20px;
+    height: 30px;
+    margin: 2px;
+    cursor: pointer;
+}
+.hbtn-blank:hover
+{
+    border-top: solid 1px #989898;
+    border-left: solid 1px #989898;
+    border-bottom: solid 1px #989898;
+    border-right: solid 1px #989898;
+    color: #1d1e25;
+}
+/*----------------- /btn ----------------------*/
+.Display
+{
+    display: inherit;
+}
+.NoDisplay
+{
+    display: none;
+}

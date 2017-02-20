@@ -1,0 +1,76 @@
+﻿    .Pager span
+    {
+        text-align: center;
+        color: #6598aa;
+        display: inline-block;
+        width: 20px;
+        background-color: #f1f5f9;
+        margin-right: 3px;
+        line-height: 150%;
+        border: 1px solid #3AC0F2;
+    }
+    .Pager a
+    {
+        text-align: center;
+        display: inline-block;
+        width: 20px;
+        background-color: #6598aa;
+        color: #f1f5f9;
+        border: 1px solid #6598aa;
+        margin-right: 3px;
+        line-height: 150%;
+        text-decoration: none;
+    }
+      .gv {
+    background-color: #fefefe;
+    margin: 5px 0 10px;
+    text-align: center;
+    width: 100%;
+}
+            .gv thead tr {
+                
+    background-color: #6598aa;
+    color:#f1f5f9;
+            }
+.gv tbody tr {
+    border-bottom: 1px solid rgba(10, 100, 250, 0.1);
+    height:20px;
+}
+.gv tbody tr:hover {
+    background-color:#f5f5ff;
+    color:#6598aa;
+}
+.gv th {
+    background-color: #708090;
+    color: #EFEFEF;
+    box-shadow: inset 0 10px 5px 0 #8f9faf;
+}
+.gv td {
+    border: 1px solid #e0e0e0;
+}
+
+
+.gv_edit
+{
+  background-image:url(../images/edit16.png);
+    background-repeat:no-repeat;
+    width:16px;
+    height:16px;
+    margin:0 3px 0 3px;
+}
+.gv_del
+{
+    background-image:url(../images/del16.png);
+    width:16px;
+    height:16px;
+    background-repeat:no-repeat;
+    margin:0 3px 0 3px;
+}
+.gv_view
+{
+    background-image:url(../images/view16.png);
+    background-repeat:no-repeat;
+    width:16px;
+    height:16px;
+    margin:0 3px 0 3px;
+}

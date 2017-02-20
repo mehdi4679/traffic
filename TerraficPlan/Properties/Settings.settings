@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TerraficPlan.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TerraficPlan_TerraficSms_Send" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://87.107.121.54/post/Send.asmx</Value>
+    </Setting>
+    <Setting Name="TerraficPlan_com_samanepay_acquirer_PaymentIFBinding" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://acquirer.samanepay.com/payments/referencepayment.asmx</Value>
+    </Setting>
+    <Setting Name="TerraficPlan_WSmojaz_Service1" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://91.98.110.183/traffic_service/Service1.asmx</Value>
+    </Setting>
+    <Setting Name="TerraficPlan_WebReference_Send" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://87.107.121.52/post/send.asmx</Value>
+    </Setting>
+    <Setting Name="TerraficPlan_Mojaz2_Service1" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://80.75.8.195/traffic_service/Service1.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

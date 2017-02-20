@@ -1,0 +1,1949 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{79EEE19E-7641-4914-B49C-A6F9F7F669AC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TerraficPlan</RootNamespace>
+    <AssemblyName>TerraficPlan</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Stimulsoft.Base, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.BusinessObjects, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.BusinessObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls.Win, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Controls.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Database, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Design, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Editor, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Check, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Report.Check.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Compare, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Report.Compare.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Design, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Report.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Helper, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Report.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Web, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Report.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Win, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Report.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AfterPurches.aspx" />
+    <Content Include="App_Themes\Theme1\Css\bootstrap-datepicker.css" />
+    <Content Include="App_Themes\Theme1\Css\bootstrap-datepicker.min.css" />
+    <Content Include="App_Themes\Theme1\Css\bootstrap-theme.css.map" />
+    <Content Include="App_Themes\Theme1\Css\bootstrap.css.map" />
+    <Content Include="App_Themes\Theme1\Css\Default.skin" />
+    <Content Include="App_Themes\Theme1\Css\Font\fontawesome-webfont.eot" />
+    <Content Include="App_Themes\Theme1\Css\Font\fontawesome-webfont.ttf" />
+    <Content Include="App_Themes\Theme1\Css\Font\fontawesome-webfont.woff" />
+    <Content Include="App_Themes\Theme1\Css\Font\Mitra-webfont.eot" />
+    <Content Include="App_Themes\Theme1\Css\Font\Mitra-webfont.ttf" />
+    <Content Include="App_Themes\Theme1\Css\Font\Mitra-webfont.woff" />
+    <Content Include="App_Themes\Theme1\Css\Font\MitraBold-webfont.ttf" />
+    <Content Include="App_Themes\Theme1\Css\Font\MitraBold-webfont.woff" />
+    <Content Include="App_Themes\Theme1\Css\Font\NewFolder1\a.mitra.01-demo.html" />
+    <Content Include="App_Themes\Theme1\Css\Font\NewFolder1\a.mitra.01-webfont.svg" />
+    <Content Include="App_Themes\Theme1\Css\Font\NewFolder1\generator_config.txt" />
+    <Content Include="App_Themes\Theme1\Css\Font\NewFolder1\stylesheet.css" />
+    <Content Include="App_Themes\Theme1\Css\Font\New\FarMitraBold.svg" />
+    <Content Include="App_Themes\Theme1\Css\Font\New\font.css" />
+    <Content Include="App_Themes\Theme1\Css\Images\arm.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\icon50.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\logo.png.1188_1.746.partial" />
+    <Content Include="App_Themes\Theme1\Css\Images\passs.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\Thumbs.db" />
+    <Content Include="App_Themes\Theme1\Date\scripts\jquery-1.6.2.min.js" />
+    <Content Include="App_Themes\Theme1\Date\scripts\jquery.ui.datepicker-cc.all.min.js" />
+    <Content Include="App_Themes\Theme1\Date\styles\images\calendar.png" />
+    <Content Include="App_Themes\Theme1\Date\styles\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="App_Themes\Theme1\Date\styles\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="App_Themes\Theme1\Date\styles\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="App_Themes\Theme1\Date\styles\images\ui-bg_highlight-hard_20_0972a5_1x100.png" />
+    <Content Include="App_Themes\Theme1\Date\styles\images\ui-bg_highlight-soft_33_003147_1x100.png" />
+    <Content Include="App_Themes\Theme1\Date\styles\images\ui-bg_highlight-soft_35_222222_1x100.png" />
+    <Content Include="App_Themes\Theme1\Date\styles\images\ui-bg_highlight-soft_44_444444_1x100.png" />
+    <Content Include="App_Themes\Theme1\Date\styles\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="App_Themes\Theme1\Date\styles\images\ui-bg_loop_25_000000_21x21.png" />
+    <Content Include="App_Themes\Theme1\Date\styles\images\ui-icons_222222_256x240.png" />
+    <Content Include="App_Themes\Theme1\Date\styles\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="App_Themes\Theme1\Date\styles\images\ui-icons_a83300_256x240.png" />
+    <Content Include="App_Themes\Theme1\Date\styles\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="App_Themes\Theme1\Date\styles\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="App_Themes\Theme1\Date\styles\jquery-ui-1.8.14.css" />
+    <Content Include="App_Themes\Theme1\dist\plugin\summernote-ext-hello.js" />
+    <Content Include="App_Themes\Theme1\dist\plugin\summernote-ext-hint.js" />
+    <Content Include="App_Themes\Theme1\dist\plugin\summernote-ext-video.js" />
+    <Content Include="App_Themes\Theme1\dist\summernote.css" />
+    <Content Include="App_Themes\Theme1\dist\summernote.js" />
+    <Content Include="App_Themes\Theme1\dist\summernote.min.js" />
+    <Content Include="App_Themes\Theme1\Images\arm2.png" />
+    <Content Include="App_Themes\Theme1\Images\favicon.ico" />
+    <Content Include="App_Themes\Theme1\Images\logo.png.1188_1.746.partial" />
+    <Content Include="App_Themes\Theme1\Images\pic.png" />
+    <Content Include="App_Themes\Theme1\Images\terrafic.png" />
+    <Content Include="App_Themes\Theme1\Images\Thumbs.db" />
+    <Content Include="App_Themes\Theme1\Images\White.gif" />
+    <Content Include="App_Themes\Theme1\js\bootstrap-datepicker.fa.js" />
+    <Content Include="App_Themes\Theme1\js\bootstrap-datepicker.fa.min.js" />
+    <Content Include="App_Themes\Theme1\js\bootstrap-datepicker.js" />
+    <Content Include="App_Themes\Theme1\js\bootstrap-datepicker.min.js" />
+    <Content Include="App_Themes\Theme1\js\jquery-1.11.1.js" />
+    <Content Include="App_Themes\Theme1\js\jquery-2.1.1.js" />
+    <Content Include="App_Themes\Theme1\js\jquery-ui-1.11.1.js" />
+    <Content Include="App_Themes\Theme1\js\jquery.price_format.2.0.min.js" />
+    <Content Include="App_Themes\Theme1\js\lang-css.js" />
+    <Content Include="App_Themes\Theme1\js\prettify.js" />
+    <Content Include="assets\avatars\avatar.png" />
+    <Content Include="assets\avatars\avatar1.png" />
+    <Content Include="assets\avatars\avatar2.png" />
+    <Content Include="assets\avatars\avatar3.png" />
+    <Content Include="assets\avatars\avatar4.png" />
+    <Content Include="assets\avatars\avatar5.png" />
+    <Content Include="assets\avatars\profile-pic.jpg" />
+    <Content Include="assets\avatars\user.jpg" />
+    <Content Include="assets\css\ace-ie.min.css" />
+    <Content Include="assets\css\ace-part2.min.css" />
+    <Content Include="assets\css\ace-rtl.min.css" />
+    <Content Include="assets\css\ace-skins.min.css" />
+    <Content Include="assets\css\ace.min.css" />
+    <Content Include="assets\css\bootstrap-datetimepicker.css" />
+    <Content Include="assets\css\bootstrap-editable.css" />
+    <Content Include="assets\css\bootstrap-timepicker.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\chosen.css" />
+    <Content Include="assets\css\colorbox.css" />
+    <Content Include="assets\css\colorpicker.css" />
+    <Content Include="assets\css\datepicker.css" />
+    <Content Include="assets\css\daterangepicker.css" />
+    <Content Include="assets\css\dropzone.css" />
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\fullcalendar.css" />
+    <Content Include="assets\css\img\alpha.png" />
+    <Content Include="assets\css\img\hue.png" />
+    <Content Include="assets\css\img\saturation.png" />
+    <Content Include="assets\css\jquery-ui.custom.min.css" />
+    <Content Include="assets\css\jquery-ui.min.css" />
+    <Content Include="assets\css\jquery.gritter.css" />
+    <Content Include="assets\css\prettify.css" />
+    <Content Include="assets\css\select2.css" />
+    <Content Include="assets\css\ui.jqgrid.css" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\images\email1.png" />
+    <Content Include="assets\images\email2.png" />
+    <Content Include="assets\images\email3.png" />
+    <Content Include="assets\images\email4.png" />
+    <Content Include="assets\images\gallery\image-1.jpg" />
+    <Content Include="assets\images\gallery\image-2.jpg" />
+    <Content Include="assets\images\gallery\image-3.jpg" />
+    <Content Include="assets\images\gallery\image-4.jpg" />
+    <Content Include="assets\images\gallery\image-5.jpg" />
+    <Content Include="assets\images\gallery\image-6.jpg" />
+    <Content Include="assets\images\gallery\thumb-1.jpg" />
+    <Content Include="assets\images\gallery\thumb-2.jpg" />
+    <Content Include="assets\images\gallery\thumb-3.jpg" />
+    <Content Include="assets\images\gallery\thumb-4.jpg" />
+    <Content Include="assets\images\gallery\thumb-5.jpg" />
+    <Content Include="assets\images\gallery\thumb-6.jpg" />
+    <Content Include="assets\js\ace-elements.min.js" />
+    <Content Include="assets\js\ace-extra.min.js" />
+    <Content Include="assets\js\ace.min.js" />
+    <Content Include="assets\js\additional-methods.min.js" />
+    <Content Include="assets\js\bootbox.min.js" />
+    <Content Include="assets\js\bootstrap-colorpicker.min.js" />
+    <Content Include="assets\js\bootstrap-tag.min.js" />
+    <Content Include="assets\js\bootstrap-wysiwyg.min.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\chosen.jquery.min.js" />
+    <Content Include="assets\js\date-time\bootstrap-datepicker.min.js" />
+    <Content Include="assets\js\date-time\bootstrap-datetimepicker.min.js" />
+    <Content Include="assets\js\date-time\bootstrap-timepicker.min.js" />
+    <Content Include="assets\js\date-time\daterangepicker.min.js" />
+    <Content Include="assets\js\date-time\moment.min.js" />
+    <Content Include="assets\js\dropzone.min.js" />
+    <Content Include="assets\js\excanvas.min.js" />
+    <Content Include="assets\js\flot\jquery.flot.min.js" />
+    <Content Include="assets\js\flot\jquery.flot.pie.min.js" />
+    <Content Include="assets\js\flot\jquery.flot.resize.min.js" />
+    <Content Include="assets\js\fuelux\data\fuelux.tree-sample-demo-data.js" />
+    <Content Include="assets\js\fuelux\fuelux.spinner.min.js" />
+    <Content Include="assets\js\fuelux\fuelux.tree.min.js" />
+    <Content Include="assets\js\fuelux\fuelux.wizard.min.js" />
+    <Content Include="assets\js\fullcalendar.min.js" />
+    <Content Include="assets\js\html5shiv.min.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-en.js" />
+    <Content Include="assets\js\jqGrid\jquery.jqGrid.min.js" />
+    <Content Include="assets\js\jquery-ui.custom.min.js" />
+    <Content Include="assets\js\jquery-ui.min.js" />
+    <Content Include="assets\js\jquery.autosize.min.js" />
+    <Content Include="assets\js\jquery.colorbox-min.js" />
+    <Content Include="assets\js\jquery.dataTables.bootstrap.js" />
+    <Content Include="assets\js\jquery.dataTables.min.js" />
+    <Content Include="assets\js\jquery.easypiechart.min.js" />
+    <Content Include="assets\js\jquery.gritter.min.js" />
+    <Content Include="assets\js\jquery.hotkeys.min.js" />
+    <Content Include="assets\js\jquery.inputlimiter.1.3.1.min.js" />
+    <Content Include="assets\js\jquery.knob.min.js" />
+    <Content Include="assets\js\jquery.maskedinput.min.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\jquery.mobile.custom.min.js" />
+    <Content Include="assets\js\jquery.nestable.min.js" />
+    <Content Include="assets\js\jquery.sparkline.min.js" />
+    <Content Include="assets\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="assets\js\jquery.validate.min.js" />
+    <Content Include="assets\js\jquery1x.min.js" />
+    <Content Include="assets\js\markdown\bootstrap-markdown.min.js" />
+    <Content Include="assets\js\markdown\markdown.min.js" />
+    <Content Include="assets\js\prettify.js" />
+    <Content Include="assets\js\respond.min.js" />
+    <Content Include="assets\js\select2.min.js" />
+    <Content Include="assets\js\spin.min.js" />
+    <Content Include="assets\js\typeahead.jquery.min.js" />
+    <Content Include="assets\js\x-editable\ace-editable.min.js" />
+    <Content Include="assets\js\x-editable\bootstrap-editable.min.js" />
+    <Content Include="Controls\CtlAttachment.ascx" />
+    <Content Include="Controls\CtlCar2.ascx" />
+    <Content Include="Controls\CtlCatalog.ascx" />
+    <Content Include="Controls\CtlChangePelak.ascx" />
+    <Content Include="Controls\ctlChangPelakView.ascx" />
+    <Content Include="Controls\CtlCodeMobilePelak.ascx" />
+    <Content Include="Controls\CtlPelakChangHistory.ascx" />
+    <Content Include="Controls\CtlRequestView.ascx" />
+    <Content Include="Controls\CtlSahm.ascx" />
+    <Content Include="Controls\ctlSharjList.ascx" />
+    <Content Include="Controls\CtlSharjSuccess.ascx" />
+    <Content Include="Controls\CtlVIN.ascx" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="Manage\assets\avatars\avatar.png" />
+    <Content Include="Manage\assets\avatars\avatar1.png" />
+    <Content Include="Manage\assets\avatars\avatar2.png" />
+    <Content Include="Manage\assets\avatars\avatar3.png" />
+    <Content Include="Manage\assets\avatars\avatar4.png" />
+    <Content Include="Manage\assets\avatars\avatar5.png" />
+    <Content Include="Manage\assets\avatars\profile-pic.jpg" />
+    <Content Include="Manage\assets\avatars\user.jpg" />
+    <Content Include="Manage\assets\css\ace-ie.min.css" />
+    <Content Include="Manage\assets\css\ace-part2.min.css" />
+    <Content Include="Manage\assets\css\ace-rtl.min.css" />
+    <Content Include="Manage\assets\css\ace-skins.min.css" />
+    <Content Include="Manage\assets\css\ace.min.css" />
+    <Content Include="Manage\assets\css\bootstrap-datetimepicker.css" />
+    <Content Include="Manage\assets\css\bootstrap-editable.css" />
+    <Content Include="Manage\assets\css\bootstrap-timepicker.css" />
+    <Content Include="Manage\assets\css\bootstrap.min.css" />
+    <Content Include="Manage\assets\css\chosen.css" />
+    <Content Include="Manage\assets\css\colorbox.css" />
+    <Content Include="Manage\assets\css\colorpicker.css" />
+    <Content Include="Manage\assets\css\datepicker.css" />
+    <Content Include="Manage\assets\css\daterangepicker.css" />
+    <Content Include="Manage\assets\css\dropzone.css" />
+    <Content Include="Manage\assets\css\font-awesome.min.css" />
+    <Content Include="Manage\assets\css\fullcalendar.css" />
+    <Content Include="Manage\assets\css\img\alpha.png" />
+    <Content Include="Manage\assets\css\img\hue.png" />
+    <Content Include="Manage\assets\css\img\saturation.png" />
+    <Content Include="Manage\assets\css\jquery-ui.custom.min.css" />
+    <Content Include="Manage\assets\css\jquery-ui.min.css" />
+    <Content Include="Manage\assets\css\jquery.gritter.css" />
+    <Content Include="Manage\assets\css\prettify.css" />
+    <Content Include="Manage\assets\css\select2.css" />
+    <Content Include="Manage\assets\css\ui.jqgrid.css" />
+    <Content Include="Manage\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Manage\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Manage\assets\images\email1.png" />
+    <Content Include="Manage\assets\images\email2.png" />
+    <Content Include="Manage\assets\images\email3.png" />
+    <Content Include="Manage\assets\images\email4.png" />
+    <Content Include="Manage\assets\images\gallery\image-1.jpg" />
+    <Content Include="Manage\assets\images\gallery\image-2.jpg" />
+    <Content Include="Manage\assets\images\gallery\image-3.jpg" />
+    <Content Include="Manage\assets\images\gallery\image-4.jpg" />
+    <Content Include="Manage\assets\images\gallery\image-5.jpg" />
+    <Content Include="Manage\assets\images\gallery\image-6.jpg" />
+    <Content Include="Manage\assets\images\gallery\thumb-1.jpg" />
+    <Content Include="Manage\assets\images\gallery\thumb-2.jpg" />
+    <Content Include="Manage\assets\images\gallery\thumb-3.jpg" />
+    <Content Include="Manage\assets\images\gallery\thumb-4.jpg" />
+    <Content Include="Manage\assets\images\gallery\thumb-5.jpg" />
+    <Content Include="Manage\assets\images\gallery\thumb-6.jpg" />
+    <Content Include="Manage\assets\js\ace-elements.min.js" />
+    <Content Include="Manage\assets\js\ace-extra.min.js" />
+    <Content Include="Manage\assets\js\ace.min.js" />
+    <Content Include="Manage\assets\js\additional-methods.min.js" />
+    <Content Include="Manage\assets\js\bootbox.min.js" />
+    <Content Include="Manage\assets\js\bootstrap-colorpicker.min.js" />
+    <Content Include="Manage\assets\js\bootstrap-tag.min.js" />
+    <Content Include="Manage\assets\js\bootstrap-wysiwyg.min.js" />
+    <Content Include="Manage\assets\js\bootstrap.min.js" />
+    <Content Include="Manage\assets\js\chosen.jquery.min.js" />
+    <Content Include="Manage\assets\js\date-time\bootstrap-datepicker.min.js" />
+    <Content Include="Manage\assets\js\date-time\bootstrap-datetimepicker.min.js" />
+    <Content Include="Manage\assets\js\date-time\bootstrap-timepicker.min.js" />
+    <Content Include="Manage\assets\js\date-time\daterangepicker.min.js" />
+    <Content Include="Manage\assets\js\date-time\moment.min.js" />
+    <Content Include="Manage\assets\js\dropzone.min.js" />
+    <Content Include="Manage\assets\js\excanvas.min.js" />
+    <Content Include="Manage\assets\js\flot\jquery.flot.min.js" />
+    <Content Include="Manage\assets\js\flot\jquery.flot.pie.min.js" />
+    <Content Include="Manage\assets\js\flot\jquery.flot.resize.min.js" />
+    <Content Include="Manage\assets\js\fuelux\data\fuelux.tree-sample-demo-data.js" />
+    <Content Include="Manage\assets\js\fuelux\fuelux.spinner.min.js" />
+    <Content Include="Manage\assets\js\fuelux\fuelux.tree.min.js" />
+    <Content Include="Manage\assets\js\fuelux\fuelux.wizard.min.js" />
+    <Content Include="Manage\assets\js\fullcalendar.min.js" />
+    <Content Include="Manage\assets\js\html5shiv.min.js" />
+    <Content Include="Manage\assets\js\jqGrid\i18n\grid.locale-en.js" />
+    <Content Include="Manage\assets\js\jqGrid\jquery.jqGrid.min.js" />
+    <Content Include="Manage\assets\js\jquery-ui.custom.min.js" />
+    <Content Include="Manage\assets\js\jquery-ui.min.js" />
+    <Content Include="Manage\assets\js\jquery.autosize.min.js" />
+    <Content Include="Manage\assets\js\jquery.colorbox-min.js" />
+    <Content Include="Manage\assets\js\jquery.dataTables.bootstrap.js" />
+    <Content Include="Manage\assets\js\jquery.dataTables.min.js" />
+    <Content Include="Manage\assets\js\jquery.easypiechart.min.js" />
+    <Content Include="Manage\assets\js\jquery.gritter.min.js" />
+    <Content Include="Manage\assets\js\jquery.hotkeys.min.js" />
+    <Content Include="Manage\assets\js\jquery.inputlimiter.1.3.1.min.js" />
+    <Content Include="Manage\assets\js\jquery.knob.min.js" />
+    <Content Include="Manage\assets\js\jquery.maskedinput.min.js" />
+    <Content Include="Manage\assets\js\jquery.min.js" />
+    <Content Include="Manage\assets\js\jquery.mobile.custom.min.js" />
+    <Content Include="Manage\assets\js\jquery.nestable.min.js" />
+    <Content Include="Manage\assets\js\jquery.sparkline.min.js" />
+    <Content Include="Manage\assets\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="Manage\assets\js\jquery.validate.min.js" />
+    <Content Include="Manage\assets\js\jquery1x.min.js" />
+    <Content Include="Manage\assets\js\markdown\bootstrap-markdown.min.js" />
+    <Content Include="Manage\assets\js\markdown\markdown.min.js" />
+    <Content Include="Manage\assets\js\prettify.js" />
+    <Content Include="Manage\assets\js\respond.min.js" />
+    <Content Include="Manage\assets\js\select2.min.js" />
+    <Content Include="Manage\assets\js\spin.min.js" />
+    <Content Include="Manage\assets\js\typeahead.jquery.min.js" />
+    <Content Include="Manage\assets\js\x-editable\ace-editable.min.js" />
+    <Content Include="Manage\assets\js\x-editable\bootstrap-editable.min.js" />
+    <Content Include="Manage\Catalog.aspx" />
+    <Content Include="Manage\ChangePelak.aspx" />
+    <Content Include="Manage\CompanyMange.aspx" />
+    <Content Include="Manage\Manage.aspx" />
+    <Content Include="Manage\NewsManage.aspx" />
+    <Content Include="Manage\PersonManage.aspx" />
+    <Content Include="Manage\PersonRequest.aspx" />
+    <Content Include="Manage\PriceList.aspx" />
+    <Content Include="Manage\ReportSale.aspx" />
+    <Content Include="Manage\ReportView.aspx" />
+    <Content Include="Manage\sahm.aspx" />
+    <Content Include="Manage\scripts\innovaeditor.js" />
+    <Content Include="Manage\scripts\innovamanager.js" />
+    <Content Include="Manage\scripts\jquery-1.7.min.js" />
+    <Content Include="Manage\WebForm1.aspx" />
+    <Content Include="Manage\WebForm2.aspx" />
+    <Content Include="Manage\WebForm3.aspx" />
+    <Content Include="MasterPages\assets\avatars\avatar.png" />
+    <Content Include="MasterPages\assets\avatars\avatar1.png" />
+    <Content Include="MasterPages\assets\avatars\avatar2.png" />
+    <Content Include="MasterPages\assets\avatars\avatar3.png" />
+    <Content Include="MasterPages\assets\avatars\avatar4.png" />
+    <Content Include="MasterPages\assets\avatars\avatar5.png" />
+    <Content Include="MasterPages\assets\avatars\profile-pic.jpg" />
+    <Content Include="MasterPages\assets\avatars\user.jpg" />
+    <Content Include="MasterPages\assets\css\ace-ie.min.css" />
+    <Content Include="MasterPages\assets\css\ace-part2.min.css" />
+    <Content Include="MasterPages\assets\css\ace-rtl.min.css" />
+    <Content Include="MasterPages\assets\css\ace-skins.min.css" />
+    <Content Include="MasterPages\assets\css\aceee.min.css" />
+    <Content Include="MasterPages\assets\css\bootstrap-datetimepicker.css" />
+    <Content Include="MasterPages\assets\css\bootstrap-editable.css" />
+    <Content Include="MasterPages\assets\css\bootstrap-timepicker.css" />
+    <Content Include="MasterPages\assets\css\bootstrap.min.css" />
+    <Content Include="MasterPages\assets\css\chosen.css" />
+    <Content Include="MasterPages\assets\css\colorbox.css" />
+    <Content Include="MasterPages\assets\css\colorpicker.css" />
+    <Content Include="MasterPages\assets\css\datepicker.css" />
+    <Content Include="MasterPages\assets\css\daterangepicker.css" />
+    <Content Include="MasterPages\assets\css\dropzone.css" />
+    <Content Include="MasterPages\assets\css\font-awesome.min.css" />
+    <Content Include="MasterPages\assets\css\fullcalendar.css" />
+    <Content Include="MasterPages\assets\css\img\alpha.png" />
+    <Content Include="MasterPages\assets\css\img\hue.png" />
+    <Content Include="MasterPages\assets\css\img\saturation.png" />
+    <Content Include="MasterPages\assets\css\jquery-ui.custom.min.css" />
+    <Content Include="MasterPages\assets\css\jquery-ui.min.css" />
+    <Content Include="MasterPages\assets\css\jquery.gritter.css" />
+    <Content Include="MasterPages\assets\css\prettify.css" />
+    <Content Include="MasterPages\assets\css\select2.css" />
+    <Content Include="MasterPages\assets\css\ui.jqgrid.css" />
+    <Content Include="MasterPages\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="MasterPages\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="MasterPages\assets\images\email1.png" />
+    <Content Include="MasterPages\assets\images\email2.png" />
+    <Content Include="MasterPages\assets\images\email3.png" />
+    <Content Include="MasterPages\assets\images\email4.png" />
+    <Content Include="MasterPages\assets\images\gallery\image-1.jpg" />
+    <Content Include="MasterPages\assets\images\gallery\image-2.jpg" />
+    <Content Include="MasterPages\assets\images\gallery\image-3.jpg" />
+    <Content Include="MasterPages\assets\images\gallery\image-4.jpg" />
+    <Content Include="MasterPages\assets\images\gallery\image-5.jpg" />
+    <Content Include="MasterPages\assets\images\gallery\image-6.jpg" />
+    <Content Include="MasterPages\assets\images\gallery\thumb-1.jpg" />
+    <Content Include="MasterPages\assets\images\gallery\thumb-2.jpg" />
+    <Content Include="MasterPages\assets\images\gallery\thumb-3.jpg" />
+    <Content Include="MasterPages\assets\images\gallery\thumb-4.jpg" />
+    <Content Include="MasterPages\assets\images\gallery\thumb-5.jpg" />
+    <Content Include="MasterPages\assets\images\gallery\thumb-6.jpg" />
+    <Content Include="MasterPages\assets\js\ace-elements.min.js" />
+    <Content Include="MasterPages\assets\js\ace-extra.min.js" />
+    <Content Include="MasterPages\assets\js\ace.min.js" />
+    <Content Include="MasterPages\assets\js\additional-methods.min.js" />
+    <Content Include="MasterPages\assets\js\bootbox.min.js" />
+    <Content Include="MasterPages\assets\js\bootstrap-colorpicker.min.js" />
+    <Content Include="MasterPages\assets\js\bootstrap-tag.min.js" />
+    <Content Include="MasterPages\assets\js\bootstrap-wysiwyg.min.js" />
+    <Content Include="MasterPages\assets\js\bootstrap.min.js" />
+    <Content Include="MasterPages\assets\js\chosen.jquery.min.js" />
+    <Content Include="MasterPages\assets\js\date-time\bootstrap-datepicker.min.js" />
+    <Content Include="MasterPages\assets\js\date-time\bootstrap-datetimepicker.min.js" />
+    <Content Include="MasterPages\assets\js\date-time\bootstrap-timepicker.min.js" />
+    <Content Include="MasterPages\assets\js\date-time\daterangepicker.min.js" />
+    <Content Include="MasterPages\assets\js\date-time\moment.min.js" />
+    <Content Include="MasterPages\assets\js\dropzone.min.js" />
+    <Content Include="MasterPages\assets\js\excanvas.min.js" />
+    <Content Include="MasterPages\assets\js\flot\jquery.flot.min.js" />
+    <Content Include="MasterPages\assets\js\flot\jquery.flot.pie.min.js" />
+    <Content Include="MasterPages\assets\js\flot\jquery.flot.resize.min.js" />
+    <Content Include="MasterPages\assets\js\fuelux\data\fuelux.tree-sample-demo-data.js" />
+    <Content Include="MasterPages\assets\js\fuelux\fuelux.spinner.min.js" />
+    <Content Include="MasterPages\assets\js\fuelux\fuelux.tree.min.js" />
+    <Content Include="MasterPages\assets\js\fuelux\fuelux.wizard.min.js" />
+    <Content Include="MasterPages\assets\js\fullcalendar.min.js" />
+    <Content Include="MasterPages\assets\js\html5shiv.min.js" />
+    <Content Include="MasterPages\assets\js\jqGrid\i18n\grid.locale-en.js" />
+    <Content Include="MasterPages\assets\js\jqGrid\jquery.jqGrid.min.js" />
+    <Content Include="MasterPages\assets\js\jquery-ui.custom.min.js" />
+    <Content Include="MasterPages\assets\js\jquery-ui.min.js" />
+    <Content Include="MasterPages\assets\js\jquery.autosize.min.js" />
+    <Content Include="MasterPages\assets\js\jquery.colorbox-min.js" />
+    <Content Include="MasterPages\assets\js\jquery.dataTables.bootstrap.js" />
+    <Content Include="MasterPages\assets\js\jquery.dataTables.min.js" />
+    <Content Include="MasterPages\assets\js\jquery.easypiechart.min.js" />
+    <Content Include="MasterPages\assets\js\jquery.gritter.min.js" />
+    <Content Include="MasterPages\assets\js\jquery.hotkeys.min.js" />
+    <Content Include="MasterPages\assets\js\jquery.inputlimiter.1.3.1.min.js" />
+    <Content Include="MasterPages\assets\js\jquery.knob.min.js" />
+    <Content Include="MasterPages\assets\js\jquery.maskedinput.min.js" />
+    <Content Include="MasterPages\assets\js\jquery.min.js" />
+    <Content Include="MasterPages\assets\js\jquery.mobile.custom.min.js" />
+    <Content Include="MasterPages\assets\js\jquery.nestable.min.js" />
+    <Content Include="MasterPages\assets\js\jquery.sparkline.min.js" />
+    <Content Include="MasterPages\assets\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="MasterPages\assets\js\jquery.validate.min.js" />
+    <Content Include="MasterPages\assets\js\jquery1x.min.js" />
+    <Content Include="MasterPages\assets\js\markdown\bootstrap-markdown.min.js" />
+    <Content Include="MasterPages\assets\js\markdown\markdown.min.js" />
+    <Content Include="MasterPages\assets\js\prettify.js" />
+    <Content Include="MasterPages\assets\js\respond.min.js" />
+    <Content Include="MasterPages\assets\js\select2.min.js" />
+    <Content Include="MasterPages\assets\js\spin.min.js" />
+    <Content Include="MasterPages\assets\js\typeahead.jquery.min.js" />
+    <Content Include="MasterPages\assets\js\x-editable\ace-editable.min.js" />
+    <Content Include="MasterPages\assets\js\x-editable\bootstrap-editable.min.js" />
+    <Content Include="Controls\CtlCompanyOnly.ascx" />
+    <Content Include="Controls\CtlPersonOnly.ascx" />
+    <Content Include="LoginMain.aspx" />
+    <Content Include="MasterPages\DashBordMaster.Master" />
+    <Content Include="MasterPages\MainMaster.Master" />
+    <Content Include="MasterPages\MasterWizard.master" />
+    <Content Include="MasterPages\City.Master" />
+    <Content Include="MasterPages\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="MasterPages\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="MasterPages\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="MasterPages\assets\fonts\FontAwesome.otf" />
+    <Content Include="MasterPages\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="MasterPages\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="MasterPages\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="MasterPages\WizardDashboard.master" />
+    <Content Include="MasterPages\ManageMaster.master" />
+    <Content Include="Manage\Web.config" />
+    <Content Include="MasterPages\NewMaster.Master" />
+    <Content Include="MasterPages\NewFreeMaster.master" />
+    <Content Include="New\AfterPurches.aspx" />
+    <Content Include="New\ChangPelak.aspx" />
+    <Content Include="New\CPR.aspx" />
+    <Content Include="New\PayWithCodeaspx.aspx" />
+    <Content Include="New\RegSucces.aspx" />
+    <Content Include="New\sharj.aspx" />
+    <Content Include="New\Web.config" />
+    <Content Include="Organ\AfterPurches.aspx" />
+    <Content Include="Organ\Car.aspx" />
+    <Content Include="Organ\ChangPelak.aspx" />
+    <Content Include="Organ\ChangPelak2.aspx" />
+    <Content Include="Organ\ChangPelakViewAllReq.aspx" />
+    <Content Include="Organ\Company.aspx" />
+    <Content Include="Organ\CompanyDaily.aspx" />
+    <Content Include="Organ\CompanyYear.aspx" />
+    <Content Include="Organ\PersonView.aspx" />
+    <Content Include="Organ\Regperson.aspx" />
+    <Content Include="Organ\sharj.aspx" />
+    <Content Include="Organ\Web.config" />
+    <Content Include="MasterPages\NewDiscountMaster.master" />
+    <Content Include="MasterPages\NewManageMaster.master" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Manage\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Manage\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Manage\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Manage\assets\fonts\FontAwesome.otf" />
+    <Content Include="Manage\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Manage\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Manage\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="New\ChangePelakRahgiri.aspx" />
+    <Content Include="App_Themes\Theme1\Css\Font\NewFolder1\a.mitra.01-webfont.eot" />
+    <Content Include="App_Themes\Theme1\Css\Font\NewFolder1\a.mitra.01-webfont.ttf" />
+    <Content Include="App_Themes\Theme1\Css\Font\NewFolder1\a.mitra.01-webfont.woff" />
+    <Content Include="App_Themes\Theme1\Css\Font\NewFolder1\a.mitra.01-webfont.woff2" />
+    <Content Include="App_Themes\Theme1\Css\Font\BMitra.eot" />
+    <Content Include="App_Themes\Theme1\Css\Font\BMitra.ttf" />
+    <Content Include="App_Themes\Theme1\Css\Font\BMitra.woff" />
+    <Content Include="App_Themes\Theme1\Css\Font\New\FarMitraBold.ttf" />
+    <Content Include="App_Themes\Theme1\Css\Font\New\FarMitraBold.woff" />
+    <Content Include="App_Themes\Theme1\Css\Font\New\Far_MitraBd.eot" />
+    <Content Include="App_Themes\Theme1\Css\Font\New\Far_MitraBd.woff2" />
+    <Content Include="Manage\Rep\Sale.mrt" />
+    <None Include="Properties\PublishProfiles\lll.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="New\0\aggregator-rtl.css" />
+    <Content Include="New\0\aggregator.css" />
+    <Content Include="New\0\book-rtl.css" />
+    <Content Include="New\0\book.css" />
+    <Content Include="New\0\calendar.png" />
+    <Content Include="New\0\datepicker.PNG" />
+    <Content Include="New\0\defaults-rtl.css" />
+    <Content Include="New\0\defaults.css" />
+    <Content Include="New\0\drupal.js" />
+    <Content Include="New\0\fa_6025c94ea29305dfcfd7d5fc68240382.js" />
+    <Content Include="New\0\forum-rtl.css" />
+    <Content Include="New\0\forum.css" />
+    <Content Include="New\0\ga.js" />
+    <Content Include="New\0\ga_002.js" />
+    <Content Include="New\0\jquery-1.js" />
+    <Content Include="New\0\jquery.css" />
+    <Content Include="New\0\jquery.js" />
+    <Content Include="New\0\jquery_002.js" />
+    <Content Include="New\0\node-rtl.css" />
+    <Content Include="New\0\node.css" />
+    <Content Include="New\0\picture-3.jpg" />
+    <Content Include="New\0\poll-rtl.css" />
+    <Content Include="New\0\poll.css" />
+    <Content Include="New\0\print.css" />
+    <Content Include="New\0\sh.css" />
+    <Content Include="New\0\sh.js" />
+    <Content Include="New\0\style-rtl.css" />
+    <Content Include="New\0\style.css" />
+    <Content Include="New\0\system-menus-rtl.css" />
+    <Content Include="New\0\system-menus.css" />
+    <Content Include="New\0\system-rtl.css" />
+    <Content Include="New\0\system.css" />
+    <Content Include="New\0\tableheader.js" />
+    <Content Include="New\0\user-rtl.css" />
+    <Content Include="New\0\user.css" />
+    <Content Include="New\Daily.aspx" />
+    <Content Include="New\News.aspx" />
+    <Content Include="New\WebForm1.aspx" />
+    <Content Include="New\WebForm2.aspx" />
+    <Content Include="New\Yearly.aspx" />
+    <Content Include="Organ\Login.aspx" />
+    <Content Include="Public\ChangePass.aspx" />
+    <Content Include="Public\Manage.aspx" />
+    <Content Include="Public\Reports.aspx" />
+    <Content Include="Public\ShoppingCart.aspx" />
+    <Content Include="Purches.aspx" />
+    <None Include="Service References\ServiceReference1\referencepayment.disco" />
+    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\com.samanepay.acquirer\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Service References\ServiceReference1\referencepayment.wsdl" />
+    <None Include="Web References\com.samanepay.acquirer\referencepayment.disco" />
+    <Content Include="Web References\Mojaz2\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\Mojaz2\Service1.disco" />
+    <Content Include="Web References\TerraficSms\MessagesBL.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\TerraficSms\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\com.samanepay.acquirer\referencepayment.wsdl" />
+    <None Include="Web References\Mojaz2\Service1.wsdl" />
+    <None Include="Web References\TerraficSms\Send.wsdl" />
+    <Content Include="Web References\WebReference\MessagesBL.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\WebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\WebReference\send.wsdl" />
+    <None Include="Web References\WSmojaz\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WSmojaz\Service1.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Theme1\Css\ace-ie.min.css" />
+    <Content Include="App_Themes\Theme1\Css\ace-part2.min.css" />
+    <Content Include="App_Themes\Theme1\Css\ace-rtl.min.css" />
+    <Content Include="App_Themes\Theme1\Css\ace-skins.min.css" />
+    <Content Include="App_Themes\Theme1\Css\ace.min.css" />
+    <Content Include="App_Themes\Theme1\Css\Almostafa.css" />
+    <Content Include="App_Themes\Theme1\Css\bootstrap-theme.css" />
+    <Content Include="App_Themes\Theme1\Css\bootstrap-theme.min.css" />
+    <Content Include="App_Themes\Theme1\Css\bootstrap.css" />
+    <Content Include="App_Themes\Theme1\Css\bootstrap.min.css" />
+    <Content Include="App_Themes\Theme1\Css\bootstrap.rtl.css" />
+    <Content Include="App_Themes\Theme1\Css\bootstrap.rtl.min.css" />
+    <Content Include="App_Themes\Theme1\Css\cssloading.css" />
+    <Content Include="App_Themes\Theme1\Css\Default.css" />
+    <Content Include="App_Themes\Theme1\Css\font-awesome.css" />
+    <Content Include="App_Themes\Theme1\Css\font-awesome.min.css" />
+    <Content Include="App_Themes\Theme1\Css\Font\font-awesome.css" />
+    <Content Include="App_Themes\Theme1\Css\Font\fontawesome-webfont.svg" />
+    <Content Include="App_Themes\Theme1\Css\Font\Mitra-webfont.svg" />
+    <Content Include="App_Themes\Theme1\Css\Gridstyle.css" />
+    <Content Include="App_Themes\Theme1\Css\gv.css" />
+    <Content Include="App_Themes\Theme1\Css\Images\004.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\005.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\006.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\007.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\Access.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\action_stop.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\Add.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\alt-hover.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\arrow_left.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\Attachment-32.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\attachment.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\back.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\backup2.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\bac_search.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\base-select.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\base.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\base.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\base1.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\bb.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\bbg1.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\bbg1.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\bbg2.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\bbg2_.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\bbg3.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\bbg5.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\bg.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\bg.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\bg2.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\bgtop.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\bgtop2.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\BG_2013.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\bl.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\bm.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\bottom.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\boxin.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\br.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\btn.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\btn_search.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\bt_close.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\bt_login.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\bt_open.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\bt_register.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\calender.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\cancel.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\cancel.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\chat.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\coint.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\collapse.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\collapsed.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\credite.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\darkok.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\date.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\delete.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\Dollar-icon.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\edit.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\expand.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\expanded.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\false.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\footer.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\g-header.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\g-header2.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\glossyback.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\glossyback2.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\GoToLeft.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\GoToRight.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\grad1.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\grad2.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\green_arrow.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\grid-alt.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\grid-header.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\grid-pgr.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\group.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\hbtn-add-r.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\hbtn-back-r.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\hbtn-blank.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\hbtn-delete-r.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\hbtn-ok-r.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\hbtn-print-r.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\hbtn-Report-r.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\hbtn-search-r.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\hbtn-upload-r.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\Header.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\Headline_left.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\Headline_left2.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\Headline_middle.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\Headline_middle2.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\Headline_right.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\Headline_right2.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\hmail.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\hmail2.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\icon.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\icon2.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\icon_search.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\indentbg.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\indentbg2.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\item-pointer-mover.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\item-pointer.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\Item_01.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\L.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\large_test.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\larglbox_header_title.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\larg_box_bot_l.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\larg_box_bot_r.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\lava.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\lava.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\lavalamp.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\linkarrow.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\lm.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\loading2.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\login.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\Loginbutton.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\Login\LoginUser.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\logo.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\main-bg.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\main-delimiter.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\main_sprite.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\menu_bg1.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\menu_bg2.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\menu_icon.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\menu_sp.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\minus.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\My-Documents.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\najah.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\nav-arrow-down-white.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\nav-arrow-down.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\nav-arrow-left-white.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\nav-arrow-left.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\nav-arrow-right-white.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\nav-arrow-right.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\nav-arrow-top-white.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\nav-arrow-top.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\neshast.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\new.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\news.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\o.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\panel_button.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\Pass.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\pattern1.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\pix.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\plus.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\R.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\rm.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\Save.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\School.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\select.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\Settings.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\shade.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\shadeactive.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\small_box_bot_l.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\small_box_bot_r.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\sms.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\SMSRecive.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\SMSSend.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\Stage_BG_btm.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\Stage_BG_top.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\Stage_BG_top.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\status.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\status.php.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\status.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\stop.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\story.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\story2.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\sub-select.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\sub.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\sub.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\tab_b.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\tab_l.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\tab_m.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\tab_r.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\title.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\tl.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\tm.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\toptitle.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\tr.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\true.gif" />
+    <Content Include="App_Themes\Theme1\Css\Images\user.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\usermenu_bg.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\usermenu_bg1.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\usermenu_bg2.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\usermenu_bg_left.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\usermenu_bg_left1.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\usermenu_bg_left2.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\usermenu_bg_right.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\usermenu_bg_right1.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\usermenu_bg_right2.jpg" />
+    <Content Include="App_Themes\Theme1\Css\Images\Users.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\V.png" />
+    <Content Include="App_Themes\Theme1\Css\Images\x.png" />
+    <Content Include="App_Themes\Theme1\Css\jquery-ui.css" />
+    <Content Include="App_Themes\Theme1\Css\jquery.timepicker.css" />
+    <Content Include="App_Themes\Theme1\Css\lightbox.css" />
+    <Content Include="App_Themes\Theme1\Css\MyCss.css" />
+    <Content Include="App_Themes\Theme1\Css\persianDatepicker-dark.css" />
+    <Content Include="App_Themes\Theme1\Css\persianDatepicker-default.css" />
+    <Content Include="App_Themes\Theme1\Css\tabcss.css" />
+    <Content Include="App_Themes\Theme1\Css\theme.css" />
+    <Content Include="App_Themes\Theme1\Css\WebFonts.css" />
+    <Content Include="App_Themes\Theme1\Images\004.gif" />
+    <Content Include="App_Themes\Theme1\Images\005.gif" />
+    <Content Include="App_Themes\Theme1\Images\006.gif" />
+    <Content Include="App_Themes\Theme1\Images\007.gif" />
+    <Content Include="App_Themes\Theme1\Images\Access.png" />
+    <Content Include="App_Themes\Theme1\Images\action_stop.gif" />
+    <Content Include="App_Themes\Theme1\Images\Add.jpg" />
+    <Content Include="App_Themes\Theme1\Images\alt-hover.png" />
+    <Content Include="App_Themes\Theme1\Images\arrow_left.gif" />
+    <Content Include="App_Themes\Theme1\Images\Attachment-32.png" />
+    <Content Include="App_Themes\Theme1\Images\attachment.gif" />
+    <Content Include="App_Themes\Theme1\Images\back.gif" />
+    <Content Include="App_Themes\Theme1\Images\backup2.png" />
+    <Content Include="App_Themes\Theme1\Images\bac_search.png" />
+    <Content Include="App_Themes\Theme1\Images\base-select.gif" />
+    <Content Include="App_Themes\Theme1\Images\base.gif" />
+    <Content Include="App_Themes\Theme1\Images\base.png" />
+    <Content Include="App_Themes\Theme1\Images\base1.png" />
+    <Content Include="App_Themes\Theme1\Images\bb.gif" />
+    <Content Include="App_Themes\Theme1\Images\bbg1.gif" />
+    <Content Include="App_Themes\Theme1\Images\bbg1.jpg" />
+    <Content Include="App_Themes\Theme1\Images\bbg2.gif" />
+    <Content Include="App_Themes\Theme1\Images\bbg2_.gif" />
+    <Content Include="App_Themes\Theme1\Images\bbg3.gif" />
+    <Content Include="App_Themes\Theme1\Images\bbg5.gif" />
+    <Content Include="App_Themes\Theme1\Images\bg.gif" />
+    <Content Include="App_Themes\Theme1\Images\bg.jpg" />
+    <Content Include="App_Themes\Theme1\Images\bg2.jpg" />
+    <Content Include="App_Themes\Theme1\Images\bgtop.jpg" />
+    <Content Include="App_Themes\Theme1\Images\bgtop2.jpg" />
+    <Content Include="App_Themes\Theme1\Images\BG_2013.gif" />
+    <Content Include="App_Themes\Theme1\Images\bl.gif" />
+    <Content Include="App_Themes\Theme1\Images\bm.gif" />
+    <Content Include="App_Themes\Theme1\Images\bottom.gif" />
+    <Content Include="App_Themes\Theme1\Images\boxin.jpg" />
+    <Content Include="App_Themes\Theme1\Images\br.gif" />
+    <Content Include="App_Themes\Theme1\Images\btn.jpg" />
+    <Content Include="App_Themes\Theme1\Images\btn_search.jpg" />
+    <Content Include="App_Themes\Theme1\Images\bt_close.png" />
+    <Content Include="App_Themes\Theme1\Images\bt_login.png" />
+    <Content Include="App_Themes\Theme1\Images\bt_open.png" />
+    <Content Include="App_Themes\Theme1\Images\bt_register.png" />
+    <Content Include="App_Themes\Theme1\Images\calender.gif" />
+    <Content Include="App_Themes\Theme1\Images\cancel.jpg" />
+    <Content Include="App_Themes\Theme1\Images\cancel.png" />
+    <Content Include="App_Themes\Theme1\Images\chat.gif" />
+    <Content Include="App_Themes\Theme1\Images\coint.jpg" />
+    <Content Include="App_Themes\Theme1\Images\collapse.png" />
+    <Content Include="App_Themes\Theme1\Images\collapsed.gif" />
+    <Content Include="App_Themes\Theme1\Images\credite.png" />
+    <Content Include="App_Themes\Theme1\Images\darkok.jpg" />
+    <Content Include="App_Themes\Theme1\Images\date.png" />
+    <Content Include="App_Themes\Theme1\Images\delete.png" />
+    <Content Include="App_Themes\Theme1\Images\Dollar-icon.png" />
+    <Content Include="App_Themes\Theme1\Images\edit.png" />
+    <Content Include="App_Themes\Theme1\Images\expand.png" />
+    <Content Include="App_Themes\Theme1\Images\expanded.gif" />
+    <Content Include="App_Themes\Theme1\Images\false.gif" />
+    <Content Include="App_Themes\Theme1\Images\footer.jpg" />
+    <Content Include="App_Themes\Theme1\Images\g-header.jpg" />
+    <Content Include="App_Themes\Theme1\Images\g-header2.jpg" />
+    <Content Include="App_Themes\Theme1\Images\glossyback.gif" />
+    <Content Include="App_Themes\Theme1\Images\glossyback2.gif" />
+    <Content Include="App_Themes\Theme1\Images\GoToLeft.png" />
+    <Content Include="App_Themes\Theme1\Images\GoToRight.png" />
+    <Content Include="App_Themes\Theme1\Images\grad1.png" />
+    <Content Include="App_Themes\Theme1\Images\grad2.png" />
+    <Content Include="App_Themes\Theme1\Images\green_arrow.gif" />
+    <Content Include="App_Themes\Theme1\Images\grid-alt.png" />
+    <Content Include="App_Themes\Theme1\Images\grid-header.png" />
+    <Content Include="App_Themes\Theme1\Images\grid-pgr.png" />
+    <Content Include="App_Themes\Theme1\Images\group.jpg" />
+    <Content Include="App_Themes\Theme1\Images\hbtn-add-r.jpg" />
+    <Content Include="App_Themes\Theme1\Images\hbtn-back-r.jpg" />
+    <Content Include="App_Themes\Theme1\Images\hbtn-blank.jpg" />
+    <Content Include="App_Themes\Theme1\Images\hbtn-delete-r.jpg" />
+    <Content Include="App_Themes\Theme1\Images\hbtn-ok-r.jpg" />
+    <Content Include="App_Themes\Theme1\Images\hbtn-print-r.jpg" />
+    <Content Include="App_Themes\Theme1\Images\hbtn-Report-r.jpg" />
+    <Content Include="App_Themes\Theme1\Images\hbtn-search-r.jpg" />
+    <Content Include="App_Themes\Theme1\Images\hbtn-upload-r.jpg" />
+    <Content Include="App_Themes\Theme1\Images\Header.jpg" />
+    <Content Include="App_Themes\Theme1\Images\Headline_left.gif" />
+    <Content Include="App_Themes\Theme1\Images\Headline_left2.gif" />
+    <Content Include="App_Themes\Theme1\Images\Headline_middle.gif" />
+    <Content Include="App_Themes\Theme1\Images\Headline_middle2.gif" />
+    <Content Include="App_Themes\Theme1\Images\Headline_right.gif" />
+    <Content Include="App_Themes\Theme1\Images\Headline_right2.gif" />
+    <Content Include="App_Themes\Theme1\Images\hmail.jpg" />
+    <Content Include="App_Themes\Theme1\Images\hmail2.jpg" />
+    <Content Include="App_Themes\Theme1\Images\icon.gif" />
+    <Content Include="App_Themes\Theme1\Images\icon2.gif" />
+    <Content Include="App_Themes\Theme1\Images\icon_search.jpg" />
+    <Content Include="App_Themes\Theme1\Images\indentbg.gif" />
+    <Content Include="App_Themes\Theme1\Images\indentbg2.gif" />
+    <Content Include="App_Themes\Theme1\Images\item-pointer-mover.gif" />
+    <Content Include="App_Themes\Theme1\Images\item-pointer.gif" />
+    <Content Include="App_Themes\Theme1\Images\Item_01.png" />
+    <Content Include="App_Themes\Theme1\Images\L.png" />
+    <Content Include="App_Themes\Theme1\Images\large_test.jpg" />
+    <Content Include="App_Themes\Theme1\Images\larglbox_header_title.png" />
+    <Content Include="App_Themes\Theme1\Images\larg_box_bot_l.png" />
+    <Content Include="App_Themes\Theme1\Images\larg_box_bot_r.png" />
+    <Content Include="App_Themes\Theme1\Images\lava.gif" />
+    <Content Include="App_Themes\Theme1\Images\lava.png" />
+    <Content Include="App_Themes\Theme1\Images\lavalamp.gif" />
+    <Content Include="App_Themes\Theme1\Images\linkarrow.gif" />
+    <Content Include="App_Themes\Theme1\Images\lm.gif" />
+    <Content Include="App_Themes\Theme1\Images\loading2.gif" />
+    <Content Include="App_Themes\Theme1\Images\login.gif" />
+    <Content Include="App_Themes\Theme1\Images\Loginbutton.png" />
+    <Content Include="App_Themes\Theme1\Images\Login\LoginUser.png" />
+    <Content Include="App_Themes\Theme1\Images\logo.png" />
+    <Content Include="App_Themes\Theme1\Images\main-bg.png" />
+    <Content Include="App_Themes\Theme1\Images\main-delimiter.png" />
+    <Content Include="App_Themes\Theme1\Images\main_sprite.png" />
+    <Content Include="App_Themes\Theme1\Images\menu_bg1.gif" />
+    <Content Include="App_Themes\Theme1\Images\menu_bg2.gif" />
+    <Content Include="App_Themes\Theme1\Images\menu_icon.gif" />
+    <Content Include="App_Themes\Theme1\Images\menu_sp.jpg" />
+    <Content Include="App_Themes\Theme1\Images\minus.gif" />
+    <Content Include="App_Themes\Theme1\Images\My-Documents.png" />
+    <Content Include="App_Themes\Theme1\Images\najah.jpg" />
+    <Content Include="App_Themes\Theme1\Images\nav-arrow-down-white.png" />
+    <Content Include="App_Themes\Theme1\Images\nav-arrow-down.png" />
+    <Content Include="App_Themes\Theme1\Images\nav-arrow-left-white.png" />
+    <Content Include="App_Themes\Theme1\Images\nav-arrow-left.png" />
+    <Content Include="App_Themes\Theme1\Images\nav-arrow-right-white.png" />
+    <Content Include="App_Themes\Theme1\Images\nav-arrow-right.png" />
+    <Content Include="App_Themes\Theme1\Images\nav-arrow-top-white.png" />
+    <Content Include="App_Themes\Theme1\Images\nav-arrow-top.png" />
+    <Content Include="App_Themes\Theme1\Images\neshast.gif" />
+    <Content Include="App_Themes\Theme1\Images\new.gif" />
+    <Content Include="App_Themes\Theme1\Images\news.gif" />
+    <Content Include="App_Themes\Theme1\Images\o.jpg" />
+    <Content Include="App_Themes\Theme1\Images\panel_button.png" />
+    <Content Include="App_Themes\Theme1\Images\Pass.png" />
+    <Content Include="App_Themes\Theme1\Images\pattern1.png" />
+    <Content Include="App_Themes\Theme1\Images\pix.gif" />
+    <Content Include="App_Themes\Theme1\Images\plus.gif" />
+    <Content Include="App_Themes\Theme1\Images\R.png" />
+    <Content Include="App_Themes\Theme1\Images\rm.gif" />
+    <Content Include="App_Themes\Theme1\Images\Save.png" />
+    <Content Include="App_Themes\Theme1\Images\School.png" />
+    <Content Include="App_Themes\Theme1\Images\select.jpg" />
+    <Content Include="App_Themes\Theme1\Images\Settings.png" />
+    <Content Include="App_Themes\Theme1\Images\shade.gif" />
+    <Content Include="App_Themes\Theme1\Images\shadeactive.gif" />
+    <Content Include="App_Themes\Theme1\Images\small_box_bot_l.png" />
+    <Content Include="App_Themes\Theme1\Images\small_box_bot_r.png" />
+    <Content Include="App_Themes\Theme1\Images\sms.jpg" />
+    <Content Include="App_Themes\Theme1\Images\SMSRecive.png" />
+    <Content Include="App_Themes\Theme1\Images\SMSSend.png" />
+    <Content Include="App_Themes\Theme1\Images\Stage_BG_btm.png" />
+    <Content Include="App_Themes\Theme1\Images\Stage_BG_top.gif" />
+    <Content Include="App_Themes\Theme1\Images\Stage_BG_top.png" />
+    <Content Include="App_Themes\Theme1\Images\status.gif" />
+    <Content Include="App_Themes\Theme1\Images\status.php.gif" />
+    <Content Include="App_Themes\Theme1\Images\status.png" />
+    <Content Include="App_Themes\Theme1\Images\stop.jpg" />
+    <Content Include="App_Themes\Theme1\Images\story.gif" />
+    <Content Include="App_Themes\Theme1\Images\story2.gif" />
+    <Content Include="App_Themes\Theme1\Images\sub-select.gif" />
+    <Content Include="App_Themes\Theme1\Images\sub.gif" />
+    <Content Include="App_Themes\Theme1\Images\sub.png" />
+    <Content Include="App_Themes\Theme1\Images\tab_b.png" />
+    <Content Include="App_Themes\Theme1\Images\tab_l.png" />
+    <Content Include="App_Themes\Theme1\Images\tab_m.png" />
+    <Content Include="App_Themes\Theme1\Images\tab_r.png" />
+    <Content Include="App_Themes\Theme1\Images\title.gif" />
+    <Content Include="App_Themes\Theme1\Images\tl.gif" />
+    <Content Include="App_Themes\Theme1\Images\tm.gif" />
+    <Content Include="App_Themes\Theme1\Images\toptitle.gif" />
+    <Content Include="App_Themes\Theme1\Images\tr.gif" />
+    <Content Include="App_Themes\Theme1\Images\true.gif" />
+    <Content Include="App_Themes\Theme1\Images\user.png" />
+    <Content Include="App_Themes\Theme1\Images\usermenu_bg.jpg" />
+    <Content Include="App_Themes\Theme1\Images\usermenu_bg1.jpg" />
+    <Content Include="App_Themes\Theme1\Images\usermenu_bg2.jpg" />
+    <Content Include="App_Themes\Theme1\Images\usermenu_bg_left.jpg" />
+    <Content Include="App_Themes\Theme1\Images\usermenu_bg_left1.jpg" />
+    <Content Include="App_Themes\Theme1\Images\usermenu_bg_left2.jpg" />
+    <Content Include="App_Themes\Theme1\Images\usermenu_bg_right.jpg" />
+    <Content Include="App_Themes\Theme1\Images\usermenu_bg_right1.jpg" />
+    <Content Include="App_Themes\Theme1\Images\usermenu_bg_right2.jpg" />
+    <Content Include="App_Themes\Theme1\Images\Users.png" />
+    <Content Include="App_Themes\Theme1\Images\V.png" />
+    <Content Include="App_Themes\Theme1\Images\x.png" />
+    <Content Include="App_Themes\Theme1\js\AlmostafaScript.js" />
+    <Content Include="App_Themes\Theme1\js\bootstrap.js" />
+    <Content Include="App_Themes\Theme1\js\Catalog.js" />
+    <Content Include="App_Themes\Theme1\js\DesktopNotify.js" />
+    <Content Include="App_Themes\Theme1\js\gv.js" />
+    <Content Include="App_Themes\Theme1\js\GV_Pager.min.js" />
+    <Content Include="App_Themes\Theme1\js\jquery-1.10.2.js" />
+    <Content Include="App_Themes\Theme1\js\jquery-1.11.1.min.js" />
+    <Content Include="App_Themes\Theme1\js\jquery-1.4.1.min.js" />
+    <Content Include="App_Themes\Theme1\js\jquery-min.js" />
+    <Content Include="App_Themes\Theme1\js\jquery-ui.js" />
+    <Content Include="App_Themes\Theme1\js\jquery.min.js" />
+    <Content Include="App_Themes\Theme1\js\jquery.noty.js" />
+    <Content Include="App_Themes\Theme1\js\jquery.noty.packaged.min.js" />
+    <Content Include="App_Themes\Theme1\js\jquery.uploadify.js" />
+    <Content Include="App_Themes\Theme1\js\jquery.uploadify.min.js" />
+    <Content Include="App_Themes\Theme1\js\json2.js" />
+    <Content Include="App_Themes\Theme1\js\persianDatepicker.js" />
+    <Content Include="App_Themes\Theme1\js\Validators.js" />
+    <Content Include="App_Themes\Theme1\js\WaterMark.min.js" />
+    <Content Include="Controls\CtlCar.ascx" />
+    <Content Include="Controls\CtlCompany.ascx" />
+    <Content Include="Controls\CtlDatePicker.ascx" />
+    <Content Include="Controls\CtlDiscountPrice.ascx" />
+    <Content Include="Controls\CtlPelak.ascx" />
+    <Content Include="Controls\CtlPerson.ascx" />
+    <Content Include="Controls\CtlPersonSelect.ascx" />
+    <Content Include="Controls\CtlPrice.ascx" />
+    <Content Include="Controls\CtlRequest.ascx" />
+    <Content Include="Controls\CtlRequestDiscount.ascx" />
+    <Content Include="Controls\CtlRequestRepeat.ascx" />
+    <Content Include="Global.asax" />
+    <Content Include="Public\Car.aspx" />
+    <Content Include="Public\Discount.aspx" />
+    <Content Include="Public\PersonalView.aspx" />
+    <Content Include="Public\RegPerson.aspx" />
+    <Content Include="Public\Repeat.aspx" />
+    <Content Include="Public\TrackingCode.aspx" />
+    <Content Include="Public\WebForm1.aspx" />
+    <None Include="Web References\TerraficSms\Send.disco" />
+    <None Include="Web References\WSmojaz\Service1.disco" />
+    <None Include="Web References\WebReference\send.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AfterPurches.aspx.cs">
+      <DependentUpon>AfterPurches.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AfterPurches.aspx.designer.cs">
+      <DependentUpon>AfterPurches.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlAttachment.ascx.cs">
+      <DependentUpon>CtlAttachment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlAttachment.ascx.designer.cs">
+      <DependentUpon>CtlAttachment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlCar.ascx.cs">
+      <DependentUpon>CtlCar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlCar.ascx.designer.cs">
+      <DependentUpon>CtlCar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlCar2.ascx.cs">
+      <DependentUpon>CtlCar2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlCar2.ascx.designer.cs">
+      <DependentUpon>CtlCar2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlCatalog.ascx.cs">
+      <DependentUpon>CtlCatalog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlCatalog.ascx.designer.cs">
+      <DependentUpon>CtlCatalog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlChangePelak.ascx.cs">
+      <DependentUpon>CtlChangePelak.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlChangePelak.ascx.designer.cs">
+      <DependentUpon>CtlChangePelak.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctlChangPelakView.ascx.cs">
+      <DependentUpon>ctlChangPelakView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctlChangPelakView.ascx.designer.cs">
+      <DependentUpon>ctlChangPelakView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlCodeMobilePelak.ascx.cs">
+      <DependentUpon>CtlCodeMobilePelak.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlCodeMobilePelak.ascx.designer.cs">
+      <DependentUpon>CtlCodeMobilePelak.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlCompany.ascx.cs">
+      <DependentUpon>CtlCompany.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlCompany.ascx.designer.cs">
+      <DependentUpon>CtlCompany.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlCompanyOnly.ascx.cs">
+      <DependentUpon>CtlCompanyOnly.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlCompanyOnly.ascx.designer.cs">
+      <DependentUpon>CtlCompanyOnly.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlDatePicker.ascx.cs">
+      <DependentUpon>CtlDatePicker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlDatePicker.ascx.designer.cs">
+      <DependentUpon>CtlDatePicker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlDiscountPrice.ascx.cs">
+      <DependentUpon>CtlDiscountPrice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlDiscountPrice.ascx.designer.cs">
+      <DependentUpon>CtlDiscountPrice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlPelak.ascx.cs">
+      <DependentUpon>CtlPelak.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlPelak.ascx.designer.cs">
+      <DependentUpon>CtlPelak.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlPelakChangHistory.ascx.cs">
+      <DependentUpon>CtlPelakChangHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlPelakChangHistory.ascx.designer.cs">
+      <DependentUpon>CtlPelakChangHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlPerson.ascx.cs">
+      <DependentUpon>CtlPerson.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlPerson.ascx.designer.cs">
+      <DependentUpon>CtlPerson.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlPersonOnly.ascx.cs">
+      <DependentUpon>CtlPersonOnly.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlPersonOnly.ascx.designer.cs">
+      <DependentUpon>CtlPersonOnly.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlPersonSelect.ascx.cs">
+      <DependentUpon>CtlPersonSelect.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlPersonSelect.ascx.designer.cs">
+      <DependentUpon>CtlPersonSelect.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlPrice.ascx.cs">
+      <DependentUpon>CtlPrice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlPrice.ascx.designer.cs">
+      <DependentUpon>CtlPrice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlRequest.ascx.cs">
+      <DependentUpon>CtlRequest.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlRequest.ascx.designer.cs">
+      <DependentUpon>CtlRequest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlRequestDiscount.ascx.cs">
+      <DependentUpon>CtlRequestDiscount.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlRequestDiscount.ascx.designer.cs">
+      <DependentUpon>CtlRequestDiscount.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlRequestRepeat.ascx.cs">
+      <DependentUpon>CtlRequestRepeat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlRequestRepeat.ascx.designer.cs">
+      <DependentUpon>CtlRequestRepeat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlRequestView.ascx.cs">
+      <DependentUpon>CtlRequestView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlRequestView.ascx.designer.cs">
+      <DependentUpon>CtlRequestView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlSahm.ascx.cs">
+      <DependentUpon>CtlSahm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlSahm.ascx.designer.cs">
+      <DependentUpon>CtlSahm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctlSharjList.ascx.cs">
+      <DependentUpon>ctlSharjList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctlSharjList.ascx.designer.cs">
+      <DependentUpon>ctlSharjList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlSharjSuccess.ascx.cs">
+      <DependentUpon>CtlSharjSuccess.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlSharjSuccess.ascx.designer.cs">
+      <DependentUpon>CtlSharjSuccess.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlVIN.ascx.cs">
+      <DependentUpon>CtlVIN.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlVIN.ascx.designer.cs">
+      <DependentUpon>CtlVIN.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMain.aspx.cs">
+      <DependentUpon>LoginMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginMain.aspx.designer.cs">
+      <DependentUpon>LoginMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Catalog.aspx.cs">
+      <DependentUpon>Catalog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Catalog.aspx.designer.cs">
+      <DependentUpon>Catalog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ChangePelak.aspx.cs">
+      <DependentUpon>ChangePelak.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ChangePelak.aspx.designer.cs">
+      <DependentUpon>ChangePelak.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\CompanyMange.aspx.cs">
+      <DependentUpon>CompanyMange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\CompanyMange.aspx.designer.cs">
+      <DependentUpon>CompanyMange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\NewsManage.aspx.cs">
+      <DependentUpon>NewsManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\NewsManage.aspx.designer.cs">
+      <DependentUpon>NewsManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\PersonManage.aspx.cs">
+      <DependentUpon>PersonManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\PersonManage.aspx.designer.cs">
+      <DependentUpon>PersonManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\PersonRequest.aspx.cs">
+      <DependentUpon>PersonRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\PersonRequest.aspx.designer.cs">
+      <DependentUpon>PersonRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\PriceList.aspx.cs">
+      <DependentUpon>PriceList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\PriceList.aspx.designer.cs">
+      <DependentUpon>PriceList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ReportSale.aspx.cs">
+      <DependentUpon>ReportSale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ReportSale.aspx.designer.cs">
+      <DependentUpon>ReportSale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ReportView.aspx.cs">
+      <DependentUpon>ReportView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ReportView.aspx.designer.cs">
+      <DependentUpon>ReportView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\sahm.aspx.cs">
+      <DependentUpon>sahm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\sahm.aspx.designer.cs">
+      <DependentUpon>sahm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\City.Master.cs">
+      <DependentUpon>City.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\City.Master.designer.cs">
+      <DependentUpon>City.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\DashBordMaster.Master.cs">
+      <DependentUpon>DashBordMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\DashBordMaster.Master.designer.cs">
+      <DependentUpon>DashBordMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\MainMaster.Master.cs">
+      <DependentUpon>MainMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\MainMaster.Master.designer.cs">
+      <DependentUpon>MainMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\ManageMaster.master.cs">
+      <DependentUpon>ManageMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\ManageMaster.master.designer.cs">
+      <DependentUpon>ManageMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\MasterWizard.master.cs">
+      <DependentUpon>MasterWizard.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\MasterWizard.master.designer.cs">
+      <DependentUpon>MasterWizard.master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\NewDiscountMaster.master.cs">
+      <DependentUpon>NewDiscountMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\NewDiscountMaster.master.designer.cs">
+      <DependentUpon>NewDiscountMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\NewFreeMaster.master.cs">
+      <DependentUpon>NewFreeMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\NewFreeMaster.master.designer.cs">
+      <DependentUpon>NewFreeMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\NewManageMaster.master.cs">
+      <DependentUpon>NewManageMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\NewManageMaster.master.designer.cs">
+      <DependentUpon>NewManageMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\NewMaster.Master.cs">
+      <DependentUpon>NewMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\NewMaster.Master.designer.cs">
+      <DependentUpon>NewMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\WizardDashboard.master.cs">
+      <DependentUpon>WizardDashboard.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\WizardDashboard.master.designer.cs">
+      <DependentUpon>WizardDashboard.master</DependentUpon>
+    </Compile>
+    <Compile Include="New\AfterPurches.aspx.cs">
+      <DependentUpon>AfterPurches.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New\AfterPurches.aspx.designer.cs">
+      <DependentUpon>AfterPurches.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="New\ChangePelakRahgiri.aspx.cs">
+      <DependentUpon>ChangePelakRahgiri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New\ChangePelakRahgiri.aspx.designer.cs">
+      <DependentUpon>ChangePelakRahgiri.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="New\ChangPelak.aspx.cs">
+      <DependentUpon>ChangPelak.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New\ChangPelak.aspx.designer.cs">
+      <DependentUpon>ChangPelak.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="New\CPR.aspx.cs">
+      <DependentUpon>CPR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New\CPR.aspx.designer.cs">
+      <DependentUpon>CPR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="New\Daily.aspx.cs">
+      <DependentUpon>Daily.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New\Daily.aspx.designer.cs">
+      <DependentUpon>Daily.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="New\News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New\News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="New\PayWithCodeaspx.aspx.cs">
+      <DependentUpon>PayWithCodeaspx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New\PayWithCodeaspx.aspx.designer.cs">
+      <DependentUpon>PayWithCodeaspx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="New\RegSucces.aspx.cs">
+      <DependentUpon>RegSucces.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New\RegSucces.aspx.designer.cs">
+      <DependentUpon>RegSucces.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="New\sharj.aspx.cs">
+      <DependentUpon>sharj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New\sharj.aspx.designer.cs">
+      <DependentUpon>sharj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="New\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="New\WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New\WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="New\Yearly.aspx.cs">
+      <DependentUpon>Yearly.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New\Yearly.aspx.designer.cs">
+      <DependentUpon>Yearly.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organ\AfterPurches.aspx.cs">
+      <DependentUpon>AfterPurches.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organ\AfterPurches.aspx.designer.cs">
+      <DependentUpon>AfterPurches.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organ\Car.aspx.cs">
+      <DependentUpon>Car.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organ\Car.aspx.designer.cs">
+      <DependentUpon>Car.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organ\ChangPelak.aspx.cs">
+      <DependentUpon>ChangPelak.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organ\ChangPelak.aspx.designer.cs">
+      <DependentUpon>ChangPelak.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organ\ChangPelak2.aspx.cs">
+      <DependentUpon>ChangPelak2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organ\ChangPelak2.aspx.designer.cs">
+      <DependentUpon>ChangPelak2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organ\ChangPelakViewAllReq.aspx.cs">
+      <DependentUpon>ChangPelakViewAllReq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organ\ChangPelakViewAllReq.aspx.designer.cs">
+      <DependentUpon>ChangPelakViewAllReq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organ\Company.aspx.cs">
+      <DependentUpon>Company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organ\Company.aspx.designer.cs">
+      <DependentUpon>Company.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organ\CompanyDaily.aspx.cs">
+      <DependentUpon>CompanyDaily.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organ\CompanyDaily.aspx.designer.cs">
+      <DependentUpon>CompanyDaily.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organ\CompanyYear.aspx.cs">
+      <DependentUpon>CompanyYear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organ\CompanyYear.aspx.designer.cs">
+      <DependentUpon>CompanyYear.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organ\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organ\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organ\PersonView.aspx.cs">
+      <DependentUpon>PersonView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organ\PersonView.aspx.designer.cs">
+      <DependentUpon>PersonView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organ\Regperson.aspx.cs">
+      <DependentUpon>Regperson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organ\Regperson.aspx.designer.cs">
+      <DependentUpon>Regperson.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organ\sharj.aspx.cs">
+      <DependentUpon>sharj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organ\sharj.aspx.designer.cs">
+      <DependentUpon>sharj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PublicFunction.cs" />
+    <Compile Include="Public\Car.aspx.cs">
+      <DependentUpon>Car.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Car.aspx.designer.cs">
+      <DependentUpon>Car.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\ChangePass.aspx.cs">
+      <DependentUpon>ChangePass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\ChangePass.aspx.designer.cs">
+      <DependentUpon>ChangePass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Discount.aspx.cs">
+      <DependentUpon>Discount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Discount.aspx.designer.cs">
+      <DependentUpon>Discount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\MyReportServerCredentials.cs" />
+    <Compile Include="Public\PersonalView.aspx.cs">
+      <DependentUpon>PersonalView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\PersonalView.aspx.designer.cs">
+      <DependentUpon>PersonalView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\RegPerson.aspx.cs">
+      <DependentUpon>RegPerson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\RegPerson.aspx.designer.cs">
+      <DependentUpon>RegPerson.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Repeat.aspx.cs">
+      <DependentUpon>Repeat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Repeat.aspx.designer.cs">
+      <DependentUpon>Repeat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\ShoppingCart.aspx.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\ShoppingCart.aspx.designer.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\TrackingCode.aspx.cs">
+      <DependentUpon>TrackingCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\TrackingCode.aspx.designer.cs">
+      <DependentUpon>TrackingCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Public\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Public\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purches.aspx.cs">
+      <DependentUpon>Purches.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purches.aspx.designer.cs">
+      <DependentUpon>Purches.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SSRS.cs" />
+    <Compile Include="Web References\com.samanepay.acquirer\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Mojaz2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\TerraficSms\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSmojaz\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="App_Themes\Theme2\" />
+    <Folder Include="Models\" />
+    <Folder Include="Upload\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TerraficPlanBLL\TerraficPlanBLL.csproj">
+      <Project>{0bebcac0-f01e-4896-910a-b49375182c16}</Project>
+      <Name>TerraficPlanBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrafficPlanCL\TrafficPlanCL.csproj">
+      <Project>{3ff1c1ee-b6c4-44dd-a721-6ff964436b61}</Project>
+      <Name>TrafficPlanCL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TrafficPlanDAL\TrafficPlanDAL.csproj">
+      <Project>{3553991e-3bb2-415f-8761-5655b7c4c387}</Project>
+      <Name>TrafficPlanDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://80.75.8.195/traffic_service/Service1.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Mojaz2\</RelPath>
+      <UpdateFromURL>http://80.75.8.195/traffic_service/Service1.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TerraficPlan_Mojaz2_Service1</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://87.107.121.52/post/send.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReference\</RelPath>
+      <UpdateFromURL>http://87.107.121.52/post/send.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TerraficPlan_WebReference_Send</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://87.107.121.54/post/Send.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\TerraficSms\</RelPath>
+      <UpdateFromURL>http://87.107.121.54/post/Send.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TerraficPlan_TerraficSms_Send</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://91.98.110.183/traffic_service/">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSmojaz\</RelPath>
+      <UpdateFromURL>http://91.98.110.183/traffic_service/</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TerraficPlan_WSmojaz_Service1</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://acquirer.samanepay.com/payments/referencepayment.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.samanepay.acquirer\</RelPath>
+      <UpdateFromURL>https://acquirer.samanepay.com/payments/referencepayment.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TerraficPlan_com_samanepay_acquirer_PaymentIFBinding</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2118</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2118/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

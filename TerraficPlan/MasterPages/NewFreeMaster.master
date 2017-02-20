@@ -1,0 +1,141 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/NewMaster.Master" AutoEventWireup="true" CodeBehind="NewFreeMaster.master.cs" Inherits="TerraficPlan.MasterPages.NewFreeMaster" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContentPlaceHolder" runat="server">
+    <style>
+                .dOwnertype {
+            background-color: red;
+        }
+
+        .CarView {
+            border-radius: 10px;
+            border-style: solid;
+            float: right;
+            margin: 5px;
+            padding: 5px;
+            width: 200px;
+        }
+
+        .dpic {
+            position: relative;
+            float: right;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .picc {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        .apic {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+        .dselecttype {
+            width: 310px;
+            float: right;
+            background-color: #CDCDCD;
+            padding: 5px;
+            border-style: solid;
+            border-radius: 5px;
+            font-family: 'B Mitra',Tahoma;
+            margin: 5px;
+        }
+    </style>
+    <asp:ContentPlaceHolder runat="server" ID="HeadContentPlaceHolder"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="topMenuProfile" runat="server">
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="subMaster" runat="server">
+    <div class="headerMenu"   >
+         
+            <%--======top menu========--%>
+               <!-- Static navbar -->
+
+
+          
+
+      <nav class="navbar navbar-default1" role="navigation"  style="margin-bottom:-3px">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li ><a href="/New/News.aspx"> راهنما </a></li>
+              <li ><a  href="/Organ/Login.aspx">   ارگانها و نهادها   </a></li>
+
+              <li ><a href="/New/Daily.aspx?tid=4"> خرید روزانه </a></li>
+              <li ><a href="/New/Yearly.aspx?tid=4">خرید ماهانه </a></li>
+              <li ><a href="/New/Yearly.aspx?tid=5">خرید فصلی </a></li>
+              <li ><a href="/New/Yearly.aspx?tid=6">خرید سالانه </a></li>
+
+             <%-- <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ثبت نام<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+              <li><a href="/Organ/Login.aspx">   ارگانها و نهادها   </a></li>
+              <%--<li><a href='/Organ/Login.aspx'>آژانس ها</a></li 
+              <li><a href='/Organ/Login.aspx'>ساکنان محدوده</a></li>
+              
+
+              </ul>
+              </li>--%>
+<%--              <li ><a href="#"> خرید شناور </a></li>--%>
+
+                <li ><a href="/New/PayWithCodeaspx.aspx"> پرداخت تعرفه با کد رهگیری </a></li>
+                      
+                              <li><a href="/New/PayWithCodeaspx.aspx?cp=1">تغییر پلاک</a></li>
+                              <li><a href="/New/PayWithCodeaspx.aspx?cp=100">پیگیری تغییر پلاک </a></li>
+
+<%--                              <li><a href="/New/sharj.aspx?cp=1">شارژ شناور</a></li>--%>
+
+                <%--  <li class="dropdown">
+                <a href='#' class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">پیگیری درخواست  <span class="caret"></span></a>
+                 <ul class="dropdown-menu" role="menu">
+             
+                      <li><a href='#'>استعلام  درخواست</a></li>
+
+              </ul>
+              </li>--%>
+
+                
+
+<%--              <li ><a href="/New/Yearly.aspx?tid=6"> پیگیری درخواست </a></li>--%>
+
+
+             <%-- <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">تعویض خط و پلاک<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+              <li><a href='<%=Page.ResolveUrl("~/Car/Pelak.aspx?pname=تعویض پلاک&CarID=")+ Request.QueryString["CarID"] %>'>تعویض پلاک</a></li>
+              <li><a href='<%=Page.ResolveUrl("~/Car/CarType.aspx?pname=تعویض خط&CarID=")+ Request.QueryString["CarID"] %>'>تعویض خط</a></li>
+              <li><a href='<%=Page.ResolveUrl("~/Car/Carcode.aspx?pname=تعویض کد&CarID=")+ Request.QueryString["CarID"] %>'>تعویض کد</a></li>
+
+              </ul>
+              </li>--%>
+              
+
+               
+  
+ 
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+          <%--=============--%>
+        </div>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:ContentPlaceHolder id="MainContentPlaceHolder" runat="server">
+
+
+    </asp:ContentPlaceHolder>
+</asp:Content>

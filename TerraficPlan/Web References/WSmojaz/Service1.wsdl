@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="add_mojaz">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pelak" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pelak_type" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="plan_type" type="s:unsignedByte" />
+            <s:element minOccurs="1" maxOccurs="1" name="off_type" type="s:unsignedByte" />
+            <s:element minOccurs="0" maxOccurs="1" name="familyName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="mobile_num" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="start_time" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="end_time" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="rial" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="stations" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="add_mojazResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="add_mojazResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="add_mojazSoapIn">
+    <wsdl:part name="parameters" element="tns:add_mojaz" />
+  </wsdl:message>
+  <wsdl:message name="add_mojazSoapOut">
+    <wsdl:part name="parameters" element="tns:add_mojazResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="add_mojaz">
+      <wsdl:input message="tns:add_mojazSoapIn" />
+      <wsdl:output message="tns:add_mojazSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="add_mojaz">
+      <soap:operation soapAction="http://tempuri.org/add_mojaz" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="add_mojaz">
+      <soap12:operation soapAction="http://tempuri.org/add_mojaz" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://91.98.110.183/traffic_service/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://91.98.110.183/traffic_service/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

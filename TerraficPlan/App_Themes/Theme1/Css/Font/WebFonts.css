@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'mitra';
+    src: url('/App_Themes/Theme1/Css/Font/Mitra-webfont.eot?#iefix') format('embedded-opentype'),
+        url('/App_Themes/Theme1/Css/Font/Mitra-webfont.woff') format('woff'),
+        url('/App_Themes/Theme1/Css/Font/Mitra-webfont.ttf') format('truetype'),
+        url('/App_Themes/Theme1/Css/Font/Mitra-webfont.svg#Mitra-webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mitrabold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/App_Themes/Theme1/Css/Font/MitraBold-webfont.eot');
+    src: url('/App_Themes/Theme1/Css/Font/MitraBold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('/App_Themes/Theme1/Css/Font/MitraBold-webfont.woff') format('woff'),
+        url('/App_Themes/Theme1/Css/Font/MitraBold-webfont.ttf') format('truetype'),
+        url('/App_Themes/Theme1/Css/Font/MitraBold-webfont.svg') format('svg');
+}

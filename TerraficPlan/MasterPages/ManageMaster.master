@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/WizardDashboard.master" AutoEventWireup="true" CodeBehind="ManageMaster.master.cs" Inherits="TerraficPlan.MasterPages.ManageMaster" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContentPlaceHolder" runat="server">
+    <asp:ContentPlaceHolder ID="HeadContentPlaceHolder" runat="server">
+
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:ContentPlaceHolder runat="server" ID="ContentPlaceHolder1">
+        
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
+    <div id="navbar" class="navbar-collapse collapse" style="margin-top:-35px">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/Manage/Manage.aspx">مدیریت درخواست </a></li>
+              <li class="active"><a href="/Manage/PriceList.aspx">قیمت ها </a></li>
+              <li class="active"><a href="/Manage/Catalog.aspx">طرح ها </a></li>
+ <li class="active"><a href="/Public/Reports.aspx">گزارش </a></li>
+
+
+              
+                </ul>
+            </div>
+    <asp:ContentPlaceHolder runat="server" ID="MainContentPlaceHolder">
+
+    </asp:ContentPlaceHolder>
+</asp:Content>

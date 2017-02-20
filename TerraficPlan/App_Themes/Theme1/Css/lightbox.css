@@ -1,0 +1,59 @@
+﻿.Lightbox
+{
+   background-color:White ;
+   left:15%;
+   visibility:hidden;
+   top:10%;
+   z-index:1100;
+   position:absolute ;
+   cursor:default;
+   color:Black;  border:4px solid #444; padding:12px;font-size:12px; margin-bottom:12px; padding:4px 6px 6px; 
+   direction:rtl;
+   text-align:right; 
+   width:70%;
+      
+}
+.close_icon{background:url(Images/x.png) no-repeat; width:25px; height:29px; display:inline;  position:absolute; top:-15px; right:-16px; cursor:pointer;}
+
+.LightBoxDiv
+{
+    display:none;cursor:wait
+}
+.DivFilter
+{
+   color:Blue;background-color:Black   ;display:none;width:100%; height:100%;left: 0px;top:0px;position:fixed; filter: progid:DXImageTransform.Microsoft.Alpha(opacity=20);-moz-opacity:.25;opacity:.25 ;z-index:1;
+}
+.DivFilterShow
+{
+     color:Blue;background-color:Black   ;display:inline ;width:100%; height:100%;left: 0px;top:0px;position:fixed; filter: progid:DXImageTransform.Microsoft.Alpha(opacity=20);-moz-opacity:.25;opacity:.25 ;z-index:1;
+  
+    }
+.UpdateProgressDiv
+{
+   color:Blue;background-color:Black   ;display:none;width:100%; height:100%;left: 0px;top:0px;position:fixed;cursor:wait; filter: progid:DXImageTransform.Microsoft.Alpha(opacity=20);-moz-opacity:.25;opacity:.25 
+}
+.TableLightBox
+{
+    background-color: White;
+    left: 25%;
+    top: 55%;
+    position: absolute;
+    cursor: default;
+    direction: rtl;
+    text-align: right;
+}
+.display
+{
+         background-color:White ;
+   left:25%;
+   visibility:inherit ;
+   top:55%;
+   z-index:1100;
+   position:absolute ;
+   cursor:default;
+   color:Black;  border:4px solid #444; padding:12px;font-size:12px; margin-bottom:12px; padding:4px 6px 6px; 
+   direction:rtl;
+   text-align:right; 
+
+    
+    }

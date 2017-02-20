@@ -1,0 +1,35 @@
+﻿
+
+   <asp:ImageButton ImageUrl="images/btn_search.jpg" runat="server" SkinID="btn_search" />
+<asp:Button runat="server" skinid="btnInsert" CssClass="hbtn-add-r"  />
+<asp:Button runat="server" skinid="btnInsert" CssClass="hbtn-add-r"  />
+ <asp:Button runat="server" skinid="btnPrn" CssClass="hbtn-print-r" />
+      <asp:Button runat="server" skinid="btnOk" CssClass="hbtn-ok-r" />                        
+                           
+
+ <asp:GridView runat="server"    CssClass="gv"  GridLines="None" Width="100%">
+ </asp:GridView>
+      
+
+
+      
+
+
+      <asp:GridView runat="server" skinid="grid1"  CssClass="grid1" HorizontalAlign="Center" CellPadding="4"   ForeColor="Black"  BorderStyle="Solid" BorderColor="#cdcdcd" BorderWidth="1px" >
+    <AlternatingRowStyle BackColor="#f5f5ff" ForeColor="#6598aa" />
+    <PagerStyle BackColor="#afbfcf" ForeColor="White" HorizontalAlign="Center"  CssClass="pagerstyle"/> 
+</asp:GridView>                    
+                 
+                                
+  <asp:GridView skinid="gv_viewpoint" runat="server" AutoGenerateColumns="False" Width="504px" CellPadding="4" ForeColor="#333333" GridLines="None"  >
+                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                <EditRowStyle BackColor="#999999" />
+                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+            </asp:GridView>
+<asp:GridView SkinID="gv_noformat"  runat="server" AutoGenerateColumns="False" BorderStyle="None"
+    CellPadding="0"  GridLines="None"  >
+ </asp:GridView>

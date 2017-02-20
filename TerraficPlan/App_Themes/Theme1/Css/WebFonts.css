@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'mitra';
+    src: url('/App_Themes/Theme1/Css/Font/BMitra.eot?#iefix') format('embedded-opentype'),
+        url('/App_Themes/Theme1/Css/Font/BMitra.woff') format('woff'),
+        url('/App_Themes/Theme1/Css/Font/BMitra.ttf') format('truetype'),
+        url('/App_Themes/Theme1/Css/Font/Mitra-webfont.svg#Mitra-webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*@font-face {
+    font-family: 'mitrabold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/App_Themes/Theme1/Css/Font/MitraBold-webfont.eot');
+    src: url('/App_Themes/Theme1/Css/Font/MitraBold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('/App_Themes/Theme1/Css/Font/MitraBold-webfont.woff') format('woff'),
+        url('/App_Themes/Theme1/Css/Font/MitraBold-webfont.ttf') format('truetype'),
+        url('/App_Themes/Theme1/Css/Font/MitraBold-webfont.svg') format('svg');
+}*/
+/*@font-face {
+    font-family: 'mitrabold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/App_Themes/Theme1/Css/Font/NewFolder1/a.mitra.01-webfont.eot');
+    src: url('/App_Themes/Theme1/Css/Font/NewFolder1/a.mitra.01-webfont.eot?#iefix') format('embedded-opentype'),
+        url('/App_Themes/Theme1/Css/Font/NewFolder1/a.mitra.01-webfont.woff') format('woff'),
+        url('/App_Themes/Theme1/Css/Font/NewFolder1/a.mitra.01-webfont.ttf') format('truetype'),
+        url('/App_Themes/Theme1/Css/Font/NewFolder1/a.mitra.01-webfont.svg') format('svg');
+}*/
+
+@font-face {
+  font-family: 'mitrabold';
+  src: url('/App_Themes/Theme1/Css/Font/New/FarMitraBold.woff') format('woff'),
+       url('/App_Themes/Theme1/Css/Font/New/FarMitraBold.ttf') format('truetype'),
+       url('/App_Themes/Theme1/Css/Font/New/FarMitraBold.svg#FarMitraBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'mitrabold2';
+  src: url('/App_Themes/Theme1/Css/Font/New/Far_MitraBd.eot');
+  src: url('/App_Themes/Theme1/Css/Font/New/Far_MitraBd.eot?#iefix') format('embedded-opentype'),
+       url('/App_Themes/Theme1/Css/Font/New/Far_MitraBd.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+

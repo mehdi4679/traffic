@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/NewMaster.Master" AutoEventWireup="true" CodeBehind="NewManageMaster.master.cs" Inherits="TerraficPlan.MasterPages.NewManageMaster" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContentPlaceHolder" runat="server">
+        <asp:ContentPlaceHolder runat="server" ID="HeadContentPlaceHolder"></asp:ContentPlaceHolder>
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="topMenuProfile" runat="server">
+       <div role="navigation" class="navbar-buttons navbar-header pull-left" runat="server" id="navigationHeader">
+                    <ul class="nav ace-nav">
+                         <li class="light-blue dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                                <%--<img alt="Jason's Photo" src="assets/avatars/user.jpg" class="nav-user-photo">--%>
+                                <span class="user-info">
+                                    <small></small>
+                                    <asp:Label runat="server" ID="lblPersonalName"></asp:Label>
+                                </span>
+
+                                <i class="ace-icon fa fa-caret-down"></i>
+                            </a>
+
+                            <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                                <li>
+                                    <a href="/Public/ChangePass.aspx">
+                                        <i class="ace-icon fa fa-key"></i>
+                                        <span>تغییر کلمه عبور</span>
+                                    </a>
+                                </li>
+
+                                <li runat="server" id="liManage" visible="false">
+                                    <a href="/manage/Manage.aspx">
+                                        <i class="ace-icon fa fa-cog"></i>
+                                        <span>مدیریت</span>
+                                    </a>
+                                </li>
+
+                                <li class="divider"></li>
+
+                                <li>
+                                    <a href="/logout.aspx">
+                                        <i class="ace-icon fa fa-power-off"></i>
+                                        <span>خروج</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+</ul>
+           </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="subMaster" runat="server">
+    <div class="headerMenu"   >
+         
+            <%--======top menu========--%>
+               <!-- Static navbar -->
+
+
+          
+
+      <nav class="navbar navbar-default1" role="navigation"  style="margin-bottom:-3px">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <%--<li ><a href="/New/News.aspx"> خانه </a></li>--%>
+
+              <li ><a href="/Manage/webform3.aspx">مدیریت صفحه اخبار </a></li>
+<%--              <li ><a href="/Organ/PersonView.aspx">پنل تخفیف </a></li>
+              <li ><a href="/New/News.aspx">پنل آزاد </a></li>--%>
+
+              <li ><a href="/Manage/PersonManage.aspx">مدیریت کاربران حقیقی </a></li>
+              <li ><a href="/Manage/CompanyMange.aspx">مدیریت کاربران حقوقی </a></li>
+ 
+              <li ><a href="/manage/catalog.aspx"> تعریف انواع تخفیف </a></li>
+              <li ><a href="/Manage/PersonRequest.aspx">مدیریت درخواست ها </a></li>
+              <li ><a href="/manage/PriceList.aspx?tid=5">تعریف تعرفه ها </a></li>
+              <li ><a href="/manage/sahm.aspx?tid=6">تخصیص سهمیه</a></li>
+              <li ><a href="/manage/ChangePelak.aspx?tid=6">تغییر پلاک</a></li>
+              <li ><a href="/manage/ReportSale.aspx?tid=6">گزارش فروش طرح</a></li>
+
+              
+                 
+                   
+
+                
+ 
+              
+
+               
+  
+ 
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+          <%--=============--%>
+        </div>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+            <asp:ContentPlaceHolder id="MainContentPlaceHolder" runat="server">
+
+
+    </asp:ContentPlaceHolder>
+
+
+</asp:Content>

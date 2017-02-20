@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/City.Master" AutoEventWireup="true" CodeBehind="MasterWizard.master.cs" Inherits="cityTheme.MasterWizard" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <asp:ContentPlaceHolder runat="server" id="HeadContentPlaceHolder">
+
+    </asp:ContentPlaceHolder>
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div data-target="#step-container" id="fuelux-wizard">
+												<ul class="wizard-steps">
+													<li   data-target="#step1">
+														<span class="step"><a href="">1</a></span>
+														<span class="title">مشخصات متقاضی</span>
+													</li>
+
+													<li   data-target="#step2">
+														<span class="step">2</span>
+														<span class="title">خودرو</span>
+													</li>
+
+													<li   data-target="#step3">
+														<span class="step">3</span>
+														<span class="title">تخفیف</span>
+													</li>
+
+													<li    data-target="#step4">
+														<span class="step">4</span>
+														<span class="title">انتخاب عوارض</span>
+													</li>
+													<li    data-target="#step4">
+														<span class="step">5</span>
+														<span class="title">دریافت رسید</span>
+													</li>
+												</ul>
+											</div>
+    
+						
+     <div class="page-header">
+							<h1>
+                                <asp:ContentPlaceHolder runat="server" ID="ContentPlaceHolderPageName">
+
+
+                                </asp:ContentPlaceHolder>
+
+							</h1>
+						</div><!-- /.page-header -->
+    <asp:ContentPlaceHolder runat="server" ID="MainContentPlaceHolder" >
+
+
+    </asp:ContentPlaceHolder>
+
+
+</asp:Content>
+

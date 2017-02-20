@@ -1,0 +1,1 @@
+Drupal.locale = { 'strings': { "Select all rows in this table": "تمام ردیف ها در این جدول را انتخاب کنید", "Deselect all rows in this table": "تمام ردیف ها در این جدول را از انتخاب خارج کنید" } };

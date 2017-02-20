@@ -1,0 +1,310 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NewMaster.master.cs" Inherits="TerraficPlan.MasterPages.NewMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <meta name="description" content="Qom Taxi" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title> طرح ترافیک شهرداری قم</title>
+   <link rel="icon" href="/App_Themes/Theme1/images/favicon.png" sizes="48x48" type="image/png"/>
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <link rel="icon" href="images/favicon.png" sizes="48x48" type="image/png"/>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png"/>
+    
+    
+<%--    <link href="/App_Themes/Theme1/Css/Font/font-awesome.min.css" rel="stylesheet" />--%>
+    <link href="/App_Themes/Theme1/Css/WebFonts.css" rel="stylesheet" />
+     <link href="/App_Themes/Theme1/Css/jquery-ui.css" rel="stylesheet" /> 
+    <link href="/App_Themes/Theme1/Css/persianDatepicker-dark.css" rel="stylesheet" />
+    <link href="/App_Themes/Theme1/Css/lightbox.css" rel="stylesheet" />
+<link rel="stylesheet" href="/App_Themes/Theme1/Css/bootstrap.min.css" />
+<link href="/App_Themes/Theme1/Css/ace.min.css" rel="stylesheet" />
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------->
+<%--    <script src="/App_Themes/Theme1/js/jquery.min.js"></script>--%>
+    <script src="../App_Themes/Theme1/js/jquery-1.11.1.min.js"></script>
+  <script src="/App_Themes/Theme1/js/jquery-ui.js"></script>
+    <script src="/App_Themes/Theme1/js/persianDatepicker.js"></script>
+    <script src="/App_Themes/Theme1/js/AlmostafaScript.js"></script>
+    <script src="/App_Themes/Theme1/js/bootstrap.js"></script>
+    <script src="../App_Themes/Theme1/js/jquery.price_format.2.0.min.js"></script>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------->
+        
+    <style>
+     
+               .CarView {
+            border-radius: 10px;
+            border-style: solid;
+            float: right;
+            margin: 5px;
+            padding: 5px;
+            width: 200px;
+            background: linear-gradient(#f0efef, #ffffff 70%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+            border: 1px solid #d2d2d2;
+            border-radius: 5px;
+            box-shadow: 0.2em 0.2em 0.25em #cccccc;
+            min-height: 265px;
+            color: #222;
+            direction: rtl;
+            margin-top: 2px;
+            padding-top: 25px;
+            text-align: right;
+        }
+
+        .dpic {
+            position: relative;
+            float: right;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .picc {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        .apic {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+        .clrequir {
+       
+        color:red;
+        
+        }
+            .msg {
+            
+                background-color: #cdcdcd;
+    border-radius: 8px;
+    border-style: solid;
+    color: rgb(255, 0, 0);
+    display: block;
+    padding: 5px;
+    position: fixed;
+    top: 20%;
+    width: 80%;
+    z-index: 9999999;
+    cursor:pointer;
+    text-align:center;
+    left:10%;
+            }
+                          tr {
+            height: 47px;
+        }
+               fieldset    {
+            background: linear-gradient(#f0efef, #ffffff 70%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+            border: 1px solid #d2d2d2;
+            border-radius: 5px;
+            box-shadow: 0.2em 0.2em 0.25em #cccccc;
+            clear: both;
+            color: #222;
+            direction: rtl;
+            margin-top: 2px;
+            padding: 25px;
+            position: relative;
+            text-align: right;
+        }
+                           legend {
+            background: linear-gradient(#86b9eb, #b5d6f7 70%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-shadow: 0.1em 0.1em 0.25em #888888;
+            font-weight: normal !important;
+            position: absolute;
+            right: 20px;
+            top: -14px;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="HeadContentPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="no-skin rtl container" style="font-family:'mitrabold',Tahoma" >
+    <div id="FilterDivForLightBox"></div>
+            <div class="msg" id="dmsg" style="display: none"></div>
+
+    <form id="MainMasterform" runat="server" >
+            <div class=" navbar-fixed-top container" role="navigation" style="background:-moz-linear-gradient(center bottom , #efeff0 0%, #fafafa 100%) repeat scroll 0 0 rgba(0, 0, 0, 0)">
+        <div class="navbar-header">
+            <a class="" href="/New/News.aspx"><span class="navbar-brand" style="font-family:'mitrabold',Tahoma,arial,sans-serif;"><span class=" " style="font-family:'mitrabold',Tahoma,arial,sans-serif;" >
+            <span class="fa fa-cab"></span> سامانه طرح ترافیک شهرداری قم</span></a></div>
+
+                <div style="position:fixed ;left:0px;z-index:-10;top: 0px">
+								<img src="/App_Themes/Theme1/Images/terrafic.png" style="width:100px;height:100px" />
+                    </div>
+                <div  style="position:fixed ;right:0px;z-index:-10;top: 0px">
+								<img src="/App_Themes/Theme1/Images/arm2.png" style="width:100px;height:100px" />
+                    </div>
+
+      <asp:ContentPlaceHolder runat="server" ID="topMenuProfile">
+      
+      </asp:ContentPlaceHolder>
+    </div>
+
+        <div class="content" style="margin-top: 55px">
+
+        <asp:ContentPlaceHolder runat="server" ID="subMaster">
+        </asp:ContentPlaceHolder>
+       
+        <div class="main-content">
+           
+            <div class="panel panel-default" style="margin-top:  5px;min-height:300px">
+                
+                <div id="page-stats" class="panel-collapse panel-body collapse in" >
+                    <div class="row" style="padding-right:5px;padding-left:5px">
+                        
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+            <footer>
+               <div align="center"  >
+                سامانه نرم افزاری  هوشمند طرح ترافیک قم 
+                    <br />
+                   <a href="http://tarsimrayan.ir/"> شرکت نرم افزاری ترسیم رایان</a>
+                  
+                    © 2015-2016
+               
+               </div>
+<p></p>
+            </footer>
+        </div>
+    </div>
+       <div runat="server" id="llll"></div>
+        
+        <script>
+            //      alert('');
+            function showMsg(status, text) {
+                 var color = (status != 'warning') ? 'green' : 'red';
+                if (text == "err") { text = "بروز خطای نا مشخص !"; }
+
+                $(".msg").addClass(status);
+                $(".msg").css('color', color);
+                $(".msg").html(text);
+
+
+                $('html, body').animate({ scrollTop: '80px' }, 500, function () {
+                    $(".msg").fadeIn(800).css('display', 'inherit');
+                });
+                $(".msg").css('display', 'block');
+                $(".msg").click(function () {
+                    $(".msg").fadeOut(800);
+                });
+            }
+
+
+
+
+            $(function () {
+                //$(".dropdown-toggle").dropdown('toggle'); // this works
+                $('.dropdown').click(function (e) {
+                    e.stopPropagation();
+                    $(".dropdown-toggle").dropdown('toggle'); // this doesn't
+                });
+
+            //$('.priceclass').priceFormat({
+            //    prefix: '   ',
+            //    centsLimit: 3,
+            //    centsSeparator: ',',
+            //});
+
+
+
+
+
+            $('[data-rel=tooltip]').tooltip({ placement: 'left' });
+            $('[data-rel=popover]').popover({ html: true });
+
+
+            $('.DivFilterShow').click(function (e) {
+                $('.DivFilterShow').attr("visibility", "hidden");
+            });
+
+
+
+            });
+
+
+
+
+
+
+
+            //$(document).ready(function(){
+            //    $('.DivFilterShow').click(function(e){
+            //        $('.DivFilterShow').attr("visibility","hidden");
+            //    })
+            //})
+
+
+
+            function ReplaceAll(stri, from, to) {
+                var str = stri.toString();
+                var idx = str.indexOf(from);
+                while (idx > -1) {
+                    str = str.replace(from, to);
+                    idx = str.indexOf(from);
+                }
+                return str;
+            }
+
+            function SplitNumber(amount) {
+                amount = ReplaceAll(amount, ",", "");
+                var str = new Array();
+                while (amount != "") {
+                    str.push(amount.substring(amount.length - 3, amount.length));
+                    amount = amount.substring(0, amount.length - 3);
+                }
+                var j = 0;
+                var newstr = new Array();
+                for (i = str.length - 1; i >= 0; i--) {
+                    newstr[j] = str[i];
+                    j++;
+                }
+                return newstr;
+            }
+
+
+            function checkMelliCode(val, args) {
+                var meli_code;
+                meli_code = args.Value;
+                if (meli_code.length == 10) {
+                    if ((meli_code == '0000000000') || (meli_code == '1111111111') || (meli_code == '2222222222') || (meli_code == '3333333333') || (meli_code == '4444444444') || (meli_code == '5555555555') || (meli_code == '6666666666') || (meli_code == '7777777777') || (meli_code == '8888888888') || meli_code == ('9999999999')) {
+                        alert("کد ملي صحيح نمي باشد");
+                        args.IsValid = false;
+                        return false;
+                    }
+                    c = parseInt(meli_code.charAt(9));
+                    n = (parseInt(meli_code.charAt(0)) * 10) + (parseInt(meli_code.charAt(1)) * 9) + (parseInt(meli_code.charAt(2)) * 8) + (parseInt(meli_code.charAt(3)) * 7) + (parseInt(meli_code.charAt(4)) * 6) + (parseInt(meli_code.charAt(5)) * 5) + (parseInt(meli_code.charAt(6)) * 4) + (parseInt(meli_code.charAt(7)) * 3) + (parseInt(meli_code.charAt(8)) * 2);
+                    r = n - parseInt(n / 11) * 11;
+                    if ((r == 0 && r == c) || (r == 1 && c == 1) || (r > 1 && c == 11 - r)) {
+                        args.IsValid = true;
+                    }
+                    else {
+                        alert("کد ملي صحيح نمي باشد");
+                        args.IsValid = false;
+                    }
+                }
+                else {
+                    alert("کد ملي صحيح نمي باشد");
+                    args.IsValid = false;
+                    return false;
+                }
+            }
+ 
+           
+
+         
+                      </script>
+
+    </form>
+</body>
+</html>

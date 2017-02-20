@@ -1,0 +1,249 @@
+﻿
+
+ .hbtn-Report_r
+{
+    border-top: solid 1px #dddddd;
+    border-left: solid 1px #dddddd;
+    border-bottom: solid 1px #aaaaaa;
+    border-right: solid 1px #aaaaaa;
+    background-image: url(images/hbtn-Report-r.jpg);
+    background-position: right;
+    color: #434448;
+    padding-right: 25px;
+    padding-left: 20px;
+    height: 30px;
+    margin: 2px;
+    cursor: pointer;
+}
+.hbtn-Report_r:hover
+{
+    border-top: solid 1px #989898;
+    border-left: solid 1px #989898;
+    border-bottom: solid 1px #989898;
+    border-right: solid 1px #989898;
+    color: #1d1e25;
+}
+.hbtn-back-r
+{
+    border-top: solid 1px #dddddd;
+    border-left: solid 1px #dddddd;
+    border-bottom: solid 1px #aaaaaa;
+    border-right: solid 1px #aaaaaa;
+    background-image: url(images/hbtn-back-r.jpg);
+    background-position: right;
+    color: #434448;
+    padding-right: 25px;
+    padding-left: 20px;
+    height: 30px;
+    margin: 2px;
+    cursor: pointer;
+}
+.hbtn-back-r:hover
+{
+    border-top: solid 1px #989898;
+    border-left: solid 1px #989898;
+    border-bottom: solid 1px #989898;
+    border-right: solid 1px #989898;
+    color: #1d1e25;
+}
+.hbtn-search-r
+{
+    border-top: solid 1px #dddddd;
+    border-left: solid 1px #dddddd;
+    border-bottom: solid 1px #aaaaaa;
+    border-right: solid 1px #aaaaaa;
+    background-image: url(images/hbtn-search-r.jpg);
+    background-position: right;
+    color: #434448;
+    padding-right: 25px;
+    padding-left: 20px;
+    height: 30px;
+    margin: 2px;
+    cursor: pointer;
+}
+.hbtn-search-r:hover
+{
+    border-top: solid 1px #989898;
+    border-left: solid 1px #989898;
+    border-bottom: solid 1px #989898;
+    border-right: solid 1px #989898;
+    color: #1d1e25;
+    background-repeat:no-repeat 
+}
+.hbtn-add-r
+{
+    border-top: solid 1px #dddddd;
+    border-left: solid 1px #dddddd;
+    border-bottom: solid 1px #aaaaaa;
+    border-right: solid 1px #aaaaaa;
+    background-image: url(images/hbtn-add-r.jpg);
+    background-position: right;
+    color: #434448;
+    padding-right: 25px;
+    padding-left: 20px;
+    height: 30px;
+    margin: 2px;
+    cursor: pointer;
+}
+.hbtn-add-r:hover
+{
+    border-top: solid 1px #989898;
+    border-left: solid 1px #989898;
+    border-bottom: solid 1px #989898;
+    border-right: solid 1px #989898;
+    color: #1d1e25;
+}
+.hbtn-delete-r
+{
+    border-top: solid 1px #dddddd;
+    border-left: solid 1px #dddddd;
+    border-bottom: solid 1px #aaaaaa;
+    border-right: solid 1px #aaaaaa;
+    background-image: url(images/hbtn-delete-r.jpg);
+    background-position: right;
+    color: #434448;
+    padding-right: 25px;
+    padding-left: 20px;
+    height: 30px;
+    margin: 2px;
+    cursor: pointer;
+}
+.hbtn-delete-r:hover
+{
+    border-top: solid 1px #989898;
+    border-left: solid 1px #989898;
+    border-bottom: solid 1px #989898;
+    border-right: solid 1px #989898;
+    color: #1d1e25;
+}
+.hbtn-ok-r
+{
+    border-top: solid 1px #dddddd;
+    border-left: solid 1px #dddddd;
+    border-bottom: solid 1px #aaaaaa;
+    border-right: solid 1px #aaaaaa;
+    background-image: url(images/hbtn-ok-r.jpg);
+    background-position: right;
+    color: #434448;
+    padding-right: 25px;
+    padding-left: 20px;
+    height: 30px;
+    margin: 2px;
+    cursor: pointer;
+}
+.hbtn-ok-r:hover
+{
+    border-top: solid 1px #989898;
+    border-left: solid 1px #989898;
+    border-bottom: solid 1px #989898;
+    border-right: solid 1px #989898;
+    color: #1d1e25;
+}
+.hbtn-stop-r
+{
+    border-top: solid 1px #dddddd;
+    border-left: solid 1px #dddddd;
+    border-bottom: solid 1px #aaaaaa;
+    border-right: solid 1px #aaaaaa;
+    background-image: url(images/stop.jpg);
+    background-position: right;
+    background-repeat:no-repeat;
+    color: #434448;
+    padding-right: 25px;
+    padding-left: 20px;
+    height: 30px;
+    margin: 2px;
+    cursor: pointer;
+    text-align:left;
+}
+.hbtn-stop-r:hover
+{
+    border-top: solid 1px #989898;
+    border-left: solid 1px #989898;
+    border-bottom: solid 1px #989898;
+    border-right: solid 1px #989898;
+    color: #1d1e25;
+}
+.hbtn-print-r
+{
+    border-top: solid 1px #dddddd;
+    border-left: solid 1px #dddddd;
+    border-bottom: solid 1px #aaaaaa;
+    border-right: solid 1px #aaaaaa;
+    background-image: url(images/hbtn-print-r.jpg);
+    background-position: right;
+    color: #434448;
+    padding-right: 25px;
+    padding-left: 20px;
+    height: 30px;
+    margin: 2px;
+    cursor: pointer;
+}
+.hbtn-print-r:hover
+{
+    border-top: solid 1px #989898;
+    border-left: solid 1px #989898;
+    border-bottom: solid 1px #989898;
+    border-right: solid 1px #989898;
+    color: #1d1e25;
+}
+
+.hbtn-blank
+{
+    border-top: solid 1px #dddddd;
+    border-left: solid 1px #dddddd;
+    border-bottom: solid 1px #aaaaaa;
+    border-right: solid 1px #aaaaaa;
+    background-image: url(images/hbtn-blank.jpg);
+    background-position: right;
+    color: #434448;
+    padding-right: 25px;
+    padding-left: 20px;
+    height: 30px;
+    margin: 2px;
+    cursor: pointer;
+}
+.hbtn-blank:hover
+{
+    border-top: solid 1px #989898;
+    border-left: solid 1px #989898;
+    border-bottom: solid 1px #989898;
+    border-right: solid 1px #989898;
+    color: #1d1e25;
+}
+
+/*-----------------------End Btn----------------------------------------*/
+body {
+    background-color: #dfe0e2;
+    color: #333333;
+    direction: rtl;
+    font-family: 'Mitra',Tahoma,arial,sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    margin: 0;
+     
+}
+/*
+@font-face {
+    font-family: 'FontAwesome', tahoma, Arial ;
+    font-style: normal;
+    font-weight: 400;
+    src:  url("fonts/fontawesome-webfont.eot?v=4.1.0") format("embedded-opentype"), url("./App_Themes/MyThem/Mitra-webfont.woff") format("woff"), url("/App_Themes/MyThem/Mitra-webfont.ttf") format("truetype");
+}8/
+@font-face {
+    font-family: "FontAwesome", tahoma, Arial;
+    font-style: normal;
+    font-weight: 700;
+    src: url("fonts/Mitra-webfont.eot") format("embedded-opentype"), url("./App_Themes/MyThem/Mitra-webfont.woff") format("woff"), url("/App_Themes/MyThem/Mitra-webfont.ttf") format("truetype");
+}*/
+input, button, select, textarea {
+    font-family: 'mitrabold',Tahoma,arial,sans-serif;
+}
+a {
+    color: #A62626;
+    text-decoration: none;
+}
+a:hover, a:focus {
+    color: #681818;
+    text-decoration: underline;
+}
