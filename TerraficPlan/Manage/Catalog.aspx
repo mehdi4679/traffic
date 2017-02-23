@@ -4,6 +4,14 @@
 </asp:Content>
  
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
+    <fieldset>
+        <legend>سال پیش فرض</legend>
+        <asp:DropDownList runat="server" ID="ddDefauleYear" ></asp:DropDownList>
+        <asp:Button runat="server" ID="btnSaveYear" Text="ذخیره" OnClick="btnSaveYear_Click" />
+    <br />
+        <asp:Label runat="server" ID="lblmsg" Text=""></asp:Label>
+    </fieldset>
+
     <div align="cenetr" style="text-align:center;width:80%"></div> 
     <asp:GridView ID="GridView1" Width="100%" CssClass="gv" runat="server" AutoGenerateColumns="False" AllowPaging="True" 
                AllowSorting="True" >

@@ -40,7 +40,27 @@ namespace TerraficPlan.Manage
             BindGrid();
 
         }
+        private void Binddd()
+        {
+            DataSet ds = CatalogClass.GetListTypeID("101");
+            ddDefauleYear.DataSource = ds;
+            ddDefauleYear.DataTextField = "CatalogName";
+            ddDefauleYear.DataValueField = "CatalogValue";
+            ddDefauleYear.DataBind();
 
+        }
+        protected void btnSaveYear_Click(object sender, EventArgs e)
+        {
+            ClCatalog cl = new ClCatalog();
+            cl.CatalogValue = ddDefauleYear.SelectedValue.ToString();
+            cl.parentID = 1;
+            cl.CatalogTypeID =101;
+            int i=CatalogClass.Update(cl);
+            if (i > 0)
+                lblmsg.Text = "ثبت انجام شد";
+            else
+                lblmsg.Text = "خطا در درج";  
+        }
     }
 
 
