@@ -221,9 +221,9 @@ cmd.Parameters.Add(new SqlParameter("CompanyID", SqlDbType.Int)).Value = Securen
 cmd.Parameters.Add(new SqlParameter("CarID", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.CarID);
 cmd.Parameters.Add(new SqlParameter("PersonalMobile", SqlDbType.NVarChar)).Value = Securenamespace.SecureData.CheckSecurity(c.Mobile);
 cmd.Parameters.Add(new SqlParameter("RepeatTypeID", SqlDbType.NVarChar)).Value = Securenamespace.SecureData.CheckSecurity(c.RepeatTypeID);
+//cmd.Parameters.Add(new SqlParameter("YearIDfilter", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.YearIDfilter);
 
-
-          SqlParameter prmResult = new SqlParameter("Result", SqlDbType.Int);
+            SqlParameter prmResult = new SqlParameter("Result", SqlDbType.Int);
             prmResult.Direction = ParameterDirection.Output;
             cmd.Parameters.Add(prmResult);
             DataSet ds = new DataSet();
@@ -244,7 +244,59 @@ cmd.Parameters.Add(new SqlParameter("RepeatTypeID", SqlDbType.NVarChar)).Value =
             }
 
         }
-         //---------------------------------------------------------------------------------------------------------
+        //---------------------------------------------------------------------------------------------------------
+
+
+
+
+        public static DataSet GetList_filter_year(ClRequestTraffic c)
+        {
+
+            SqlCommand cmd = new SqlCommand("PRC_RequestTraffic_GetList_filter_year", cnn);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("UserIDLog", SqlDbType.NVarChar)).Value = CSharp.PublicFunction.GetUserID();
+            cmd.Parameters.Add(new SqlParameter("IpLog", SqlDbType.NVarChar)).Value = CSharp.PublicFunction.GetIPAddress();
+            cmd.Parameters.Add(new SqlParameter("OSLog", SqlDbType.NVarChar)).Value = CSharp.PublicFunction.GetOS();
+            cmd.Parameters.Add(new SqlParameter("OSVerLog", SqlDbType.NVarChar)).Value = CSharp.PublicFunction.GetBrowser() + CSharp.PublicFunction.GetBrowserVersion();
+            cmd.Parameters.Add(new SqlParameter("URLLog", SqlDbType.NVarChar)).Value = CSharp.PublicFunction.GetURL();
+
+            cmd.Parameters.Add(new SqlParameter("RequestTrafficID", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.RequestTrafficID);
+            cmd.Parameters.Add(new SqlParameter("OwnerType", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.OwnerType);
+            cmd.Parameters.Add(new SqlParameter("TrackingCode", SqlDbType.NVarChar)).Value = Securenamespace.SecureData.CheckSecurity(c.TrackingCode);
+            cmd.Parameters.Add(new SqlParameter("DiscountType", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.DiscountType);
+            cmd.Parameters.Add(new SqlParameter("PersonalID", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.PersonalID);
+            cmd.Parameters.Add(new SqlParameter("CompanyID", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.CompanyID);
+            cmd.Parameters.Add(new SqlParameter("CarID", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.CarID);
+            cmd.Parameters.Add(new SqlParameter("PersonalMobile", SqlDbType.NVarChar)).Value = Securenamespace.SecureData.CheckSecurity(c.Mobile);
+            cmd.Parameters.Add(new SqlParameter("RepeatTypeID", SqlDbType.NVarChar)).Value = Securenamespace.SecureData.CheckSecurity(c.RepeatTypeID);
+            cmd.Parameters.Add(new SqlParameter("YearIDfilter", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.YearIDfilter);
+
+            SqlParameter prmResult = new SqlParameter("Result", SqlDbType.Int);
+            prmResult.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(prmResult);
+            DataSet ds = new DataSet();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            try
+            {
+                cnn.Open();
+                da.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                cnn.Close();
+            }
+
+        }
+
+
+
+
+
         public static DataSet GetListWS(ClRequestTraffic c)
         {
 

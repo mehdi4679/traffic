@@ -17,12 +17,30 @@ namespace TerraficPlan.Manage
         {
             if(!Page.IsPostBack)
             {
+
+                ClCatalog cl2 = new ClCatalog();
+                cl2.CatalogTypeID = Convert.ToInt32("101");
+
+                DataSet ds1 = CatalogClass.GetList(cl2);
+                ddDefauleYear.DataSource = ds1;
+                ddDefauleYear.DataTextField = "CatalogName";
+                ddDefauleYear.DataValueField = "CatalogValue";
+
+                ddDefauleYear.DataBind();
+
+                ds1.Dispose();
+
+
+                ddDefauleYear.Text = "1396";
                 BindGrid();
             }
+            else
+            { ddDefauleYear.Text = ddDefauleYear.SelectedValue; }
         }
         private void BindGrid()
         {
             ClCompany cl = new ClCompany();
+            cl.YearIDfilter = Convert.ToInt32(ddDefauleYear.SelectedValue);
             DataSet ds = CompanyClass.GetListCompanyRequest(cl);
             DataView dv = new DataView(ds.Tables[0]);
             if (ViewState["PersonalID"] == null)
@@ -66,6 +84,12 @@ namespace TerraficPlan.Manage
             ViewState["PersonalID"] = e.SortExpression + " " + StrSortDirection;
             BindGrid();
 
+        }
+
+        protected void ddDefauleYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ddDefauleYear.Text = ddDefauleYear.SelectedValue;
+            BindGrid();
         }
     }
 }

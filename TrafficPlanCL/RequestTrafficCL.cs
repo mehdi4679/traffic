@@ -82,7 +82,18 @@ public int? YearID
     set { _YearID = value; }
 }
 
-private int? _CarID;
+
+
+        private int? _YearIDfilter;
+        public int? YearIDfilter
+        {
+            get { return _YearIDfilter; }
+            set { _YearIDfilter = value; }
+        }
+
+
+
+        private int? _CarID;
 public int? CarID {
 get { return _CarID; }
 set { _CarID = value; }
