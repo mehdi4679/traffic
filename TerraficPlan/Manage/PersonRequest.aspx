@@ -48,7 +48,7 @@
        
 
           <fieldset style="padding:30px"><legend>درخواست های ثبت شده</legend>  
-
+              <asp:DropDownList runat="server" ID="ddDefauleYear" AutoPostBack="True" OnSelectedIndexChanged="ddDefauleYear_SelectedIndexChanged" ></asp:DropDownList>
               <asp:GridView CssClass="gv" AutoGenerateColumns="false" runat="server" ID="grid1" AllowPaging="true" AllowSorting="true" OnPageIndexChanging="grid1_PageIndexChanging" OnSorting="grid1_Sorting">
                   <Columns>
                 <asp:TemplateField HeaderText="ردیف">

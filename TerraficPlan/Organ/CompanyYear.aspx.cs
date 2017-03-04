@@ -19,15 +19,19 @@ namespace TerraficPlan.Organ
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!Page.IsPostBack)
+            if (!Page.IsPostBack)
             {
                 lblPersonID.Text = Session["PersonalID"].ToString();
                 lblCompanyID.Text = GetCompanyID(Convert.ToInt32(lblPersonID.Text));
 
                 BindDD();
-
+                ddDefauleYear.Text = "1396";
                 BindGrid();
+                ddYear.Enabled = false;
             }
+            else
+            { ddDefauleYear.Text = ddDefauleYear.SelectedValue; }
+
             Visiblebtnpay();
         }
 
@@ -42,6 +46,19 @@ namespace TerraficPlan.Organ
             ddYear.DataValueField = "CatalogValue";
             ddYear.DataBind();
             ds.Dispose();
+
+
+            ClCatalog cl2 = new ClCatalog();
+            cl2.CatalogTypeID = Convert.ToInt32("101");
+
+            DataSet ds1 = CatalogClass.GetList(cl2);
+            ddDefauleYear.DataSource = ds1;
+            ddDefauleYear.DataTextField = "CatalogName";
+            ddDefauleYear.DataValueField = "CatalogValue";
+            
+            ddDefauleYear.DataBind();
+
+            ds1.Dispose();
         }
 
         private void BindCar()
@@ -181,9 +198,9 @@ namespace TerraficPlan.Organ
             ClRequestTraffic cl = new ClRequestTraffic();
             cl.PersonalID = Convert.ToInt32(lblPersonID.Text);
             cl.RepeatTypeID = 6;
-            cl.YearID =Convert.ToInt32( ddYear.SelectedValue);
-
-            DataSet ds=RequestTrafficClass.GetList(cl);
+            cl.YearID =Convert.ToInt32(ddYear.SelectedValue);
+            cl.YearIDfilter= Convert.ToInt32(ddDefauleYear.SelectedValue);
+            DataSet ds=RequestTrafficClass.GetList_filter_year(cl);
             DataView dv = new DataView(ds.Tables[0]);
             if (ViewState["RequestTrafficID"] == null)
             {
@@ -360,6 +377,18 @@ namespace TerraficPlan.Organ
             catch (Exception ex)
             {
             }
+        }
+
+        protected void ddDefauleYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BindDD();
+            ddDefauleYear.Text = ddDefauleYear.SelectedValue;
+            BindGrid();
+        }
+
+        protected void ddDefauleYear_TextChanged(object sender, EventArgs e)
+        {
+          
         }
     }
 }

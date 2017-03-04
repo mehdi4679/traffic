@@ -54,7 +54,21 @@ public String CompanyEmail {
 get { return _CompanyEmail; }
 set { _CompanyEmail = value; }
 }
-private int? _PersonalID;
+
+
+
+        private int? _YearIDfilter;
+        public int? YearIDfilter
+        {
+            get { return _YearIDfilter; }
+            set { _YearIDfilter = value; }
+        }
+
+
+
+
+
+        private int? _PersonalID;
 public int? PersonalID
 {
     get { return _PersonalID; }

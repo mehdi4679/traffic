@@ -26,7 +26,7 @@
                 <td colspan="100">
 
   
-                </td>
+                </td&nbsp;</td>
             </tr>
  
     </table>
@@ -38,6 +38,11 @@
 
 
     <asp:Button runat="server" ID="btnAdd" Text="ثبت درخواست" OnClick="btnAdd_Click" CssClass="btn btn-large "/>
+   
+    <asp:DropDownList runat="server" ID="ddDefauleYear" style="position:center;float:left;" AutoPostBack="True" OnSelectedIndexChanged="ddDefauleYear_SelectedIndexChanged" OnTextChanged="ddDefauleYear_TextChanged"></asp:DropDownList>
+    
+
+               
     
 
                <asp:GridView CssClass="gv" runat="server" AutoGenerateColumns="false" ID="GridView1"   AllowSorting="true" OnPageIndexChanging="GridView1_PageIndexChanging" OnSorting="GridView1_Sorting"
@@ -95,7 +100,7 @@
 <div id="lightinsert" class="Lightbox" style="padding:30px;text-align:center;position:fixed"  >
  <center>
         <fieldset style="width:300px;padding:10px">
-        <legend>پرداخت به صورت</legend>
+        <legend>پرداخت به صورت
     <table style="text-align:center">
         <tr><td><asp:RadioButton runat="server" ID="rdonline" Checked="true" GroupName ="epaygrooup" Text="آنلاین"/></td><td colspan="10"></td></tr>
         </table>

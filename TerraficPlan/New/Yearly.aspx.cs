@@ -19,6 +19,7 @@ namespace TerraficPlan.New
         {
              if (!Page.IsPostBack)
             {
+                ddYear.Enabled = false;
                 lblRahCode.Text = PublicFunction.GetUniquCode();
                 lblREpeatTypeID.Text = Convert.ToInt32(Request.QueryString["tid"].ToString()).ToString();
                 if (lblREpeatTypeID.Text == "4")
@@ -345,7 +346,7 @@ namespace TerraficPlan.New
                  //LightBox.Value = "1";
                   Response.Redirect("~/New/RegSucces.aspx?code="+lblRahCode.Text);
                 }
-                catch
+                catch(Exception   ex)
                 {
                     TerraficPlanBLL.Utility.ShowMsg(Page, ProPertyData.MsgType.warning, "خطا در ارسال مدارک به سرور");
                 }

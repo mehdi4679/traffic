@@ -7,27 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TerraficPlan.Manage {
+namespace Qr {
     
     
-    public partial class PersonRequest {
+    public partial class Mspsoft {
         
         /// <summary>
-        /// ddDefauleYear control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddDefauleYear;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// grid1 control.
+        /// printablediv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grid1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl printablediv;
     }
 }

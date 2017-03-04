@@ -113,8 +113,9 @@ cmd.Parameters.Add(new SqlParameter("CompanyEmail", SqlDbType.NVarChar)).Value =
             cmd.Parameters.Add(new SqlParameter("OSLog", SqlDbType.NVarChar)).Value = CSharp.PublicFunction.GetOS();
             cmd.Parameters.Add(new SqlParameter("OSVerLog", SqlDbType.NVarChar)).Value = CSharp.PublicFunction.GetBrowser() + CSharp.PublicFunction.GetBrowserVersion();
             cmd.Parameters.Add(new SqlParameter("URLLog", SqlDbType.NVarChar)).Value = CSharp.PublicFunction.GetURL();
+            cmd.Parameters.Add(new SqlParameter("YearIDfilter", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.YearIDfilter);
 
- 
+
 
             SqlParameter prmResult = new SqlParameter("Result", SqlDbType.Int);
             prmResult.Direction = ParameterDirection.Output;

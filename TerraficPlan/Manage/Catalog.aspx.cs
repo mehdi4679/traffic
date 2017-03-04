@@ -17,7 +17,21 @@ namespace TerraficPlan.Manage
         {
             if (!Page.IsPostBack) {
                 BindGrid();
+                Binddd();
+                BindYear();
             }
+        }
+
+        private void BindYear()
+        {
+            ClCatalog cl = new ClCatalog();
+            cl.CatalogTypeID = 101;
+            cl.parentID = 1;
+
+            DataSet ds = CatalogClass.GetList(cl);
+            if(ds.Tables[0].Rows.Count>0)
+            ddDefauleYear.SelectedValue = ds.Tables[0].Rows[0]["CAID"].ToString();
+
         }
 
         private void BindGrid() {
@@ -40,7 +54,28 @@ namespace TerraficPlan.Manage
             BindGrid();
 
         }
+        private void Binddd()
+        {
+            DataSet ds = CatalogClass.GetListTypeID("101");
+            ddDefauleYear.DataSource = ds;
+            ddDefauleYear.DataTextField = "CatalogName";
+            ddDefauleYear.DataValueField = "CAID";
 
+            ddDefauleYear.DataBind();
+
+        }
+        protected void btnSaveYear_Click(object sender, EventArgs e)
+        {
+            ClCatalog cl = new ClCatalog();
+            cl.CID = Convert.ToInt32( ddDefauleYear.SelectedValue );
+            cl.parentID = 1;
+            cl.CatalogTypeID =101;
+            int i=CatalogClass.Update(cl);
+            if (i > 0)
+                lblmsg.Text = "ثبت انجام شد";
+            else
+                lblmsg.Text = "خطا در درج";  
+        }
     }
 
 
