@@ -27,6 +27,7 @@ namespace TerraficPlan.Organ
                 BindDD();
 
                 BindGrid();
+                ddYear.Enabled = false;
             }
             Visiblebtnpay();
         }
