@@ -63,6 +63,13 @@
       <HintPath>..\packages\Microsoft.ReportViewer.WinForms.v12.12.0.0.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Qr">
+      <HintPath>report\Qr.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCoder, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>report\QRCoder.dll</HintPath>
+    </Reference>
     <Reference Include="Stimulsoft.Base, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Base.dll</HintPath>
@@ -685,6 +692,11 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="report\arm2.png" />
+    <Content Include="report\logotrafic.jpg" />
+    <Content Include="report\Mspsoft.aspx" />
+    <Content Include="report\StyleSheet1.css" />
+    <Content Include="report\terrafic.png" />
     <Content Include="Web References\com.samanepay.acquirer\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -1812,6 +1824,13 @@
     </Compile>
     <Compile Include="Purches.aspx.designer.cs">
       <DependentUpon>Purches.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="report\Mspsoft.aspx.cs">
+      <DependentUpon>Mspsoft.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="report\Mspsoft.aspx.designer.cs">
+      <DependentUpon>Mspsoft.aspx</DependentUpon>
     </Compile>
     <Compile Include="Service References\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>

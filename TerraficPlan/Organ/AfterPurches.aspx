@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContentPlaceHolder" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="server">
+    <div runat="server" id="derror" visible="false">
     <asp:Label runat="server" ID="txtResult"></asp:Label>
     <asp:Label runat="server" ID="lblPricde" Visible="false"></asp:Label>
  
@@ -86,6 +87,12 @@
     </fieldset>
 </center>
 </div>
+    </div>
+
+        <div id="lkjljnjkn" >
+        <iframe runat="server" id="if1" visible="false"  ></iframe>
+
+    </div>
 
     <script language="javascript" type="text/javascript">
         // printDiv('dContent');
