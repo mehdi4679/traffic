@@ -66,9 +66,10 @@
     <Reference Include="Qr">
       <HintPath>report\Qr.dll</HintPath>
     </Reference>
-    <Reference Include="QRCoder, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="QRCoder">
       <HintPath>report\QRCoder.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Stimulsoft.Base, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -635,6 +636,7 @@
     <Content Include="Manage\Rep\Sale.mrt" />
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\lll.pubxml" />
+    <None Include="Properties\PublishProfiles\moham.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -695,8 +697,6 @@
     <Content Include="report\arm2.png" />
     <Content Include="report\logotrafic.jpg" />
     <Content Include="report\Mspsoft.aspx" />
-    <Content Include="report\Qr.dll" />
-    <Content Include="report\QRCoder.dll" />
     <Content Include="report\StyleSheet1.css" />
     <Content Include="report\terrafic.png" />
     <Content Include="Web References\com.samanepay.acquirer\Reference.map">
@@ -1869,6 +1869,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="App_Themes\Theme2\" />
+    <Folder Include="bin\" />
     <Folder Include="Models\" />
     <Folder Include="Upload\" />
   </ItemGroup>
