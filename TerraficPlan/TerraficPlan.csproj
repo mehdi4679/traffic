@@ -695,6 +695,8 @@
     <Content Include="report\arm2.png" />
     <Content Include="report\logotrafic.jpg" />
     <Content Include="report\Mspsoft.aspx" />
+    <Content Include="report\Qr.dll" />
+    <Content Include="report\QRCoder.dll" />
     <Content Include="report\StyleSheet1.css" />
     <Content Include="report\terrafic.png" />
     <Content Include="Web References\com.samanepay.acquirer\Reference.map">
