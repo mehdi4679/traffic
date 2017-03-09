@@ -146,10 +146,11 @@
 
                     <td class="tda" >
                     <a  href='<%#Eval("PersonalMobile") %>' data-rel="tooltip" title="ارسال پیامک" data-original-title="ارسال پیامک"  runat="server" id="ASMS" class="fa fa-mobile" onserverclick="ASMS_ServerClick"></a>
+                        <br />
+                    <a  href='<%# "~/report/Mspsoft.aspx?epayid="+Eval("EpayOrderID").ToString() %>'   data-rel="tooltip" title="ارسال پیامک" data-original-title="ارسال پیامک"  runat="server" id="ASMSc" class='<%# Eval("EpayOrderID").ToString()==""? "":"fa fa-file" %>'  ></a>
 
                     </td>
-
-                </tr>
+                 </tr>
             </table>
  
             

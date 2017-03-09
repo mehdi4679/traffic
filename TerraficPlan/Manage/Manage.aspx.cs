@@ -30,8 +30,7 @@ namespace TerraficPlan.Manage
         public void BindGrid()
         {
             ClRequestTraffic cl = new ClRequestTraffic();
-             //  cl.PersonalID = Request.QueryString[""];
-            cl.Firstname = txtname.Text;
+             cl.Firstname = txtname.Text;
             cl.LastName = txtLastName.Text;
             cl.fromDate = DateConvert.sh2m(txtFromDate.Text).ToString();
             cl.ToDate = DateConvert.sh2m(txtToDate.Text).ToString();

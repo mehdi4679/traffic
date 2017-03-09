@@ -37,8 +37,8 @@ namespace TerraficPlan.New
                 {
 
 
-                    //if (transactionState.Equals("OK"))
-                    if(1==1)
+                     if (transactionState.Equals("OK"))
+                    //if(1==1)
                     {
 
 
@@ -119,17 +119,19 @@ namespace TerraficPlan.New
                                 cll.Comment = "OKK";
                                 EpayOrderClass.Update(cll);
                                 lblstats.Text = succeedMsg;
-    
-                            //}
+                            if1.Src = "~/report/RepAfetrPamant.aspx?epayid=" + EpayOrderID.ToString();
+                            if1.Visible = true;
 
                         }
                         else
                         {
                             TransactionChecking((int)result);
+                          //  derror.Visible = true;
                         }
                     }
                     else
                     {
+                        derror.Visible = true;
                         isError = true;
                         errorMsg = "متاسفانه بانک خريد شما را تاييد نکرده است";
 

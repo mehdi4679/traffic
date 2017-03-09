@@ -29,6 +29,7 @@ public String TrackingCode {
 get { return _TrackingCode; }
 set { _TrackingCode = value; }
 }
+        public string Epayorderid { get; set; }
 private int? _DiscountType;
 public int? DiscountType {
 get { return _DiscountType; }

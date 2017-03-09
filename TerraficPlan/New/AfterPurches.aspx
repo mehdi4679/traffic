@@ -88,7 +88,7 @@
       </div>
 
     <div id="lkjljnjkn" >
-        <iframe runat="server" id="if1" visible="false"  ></iframe>
+        <iframe runat="server" id="if1" visible="false" width="100%" height="600px"  ></iframe>
 
     </div>
 

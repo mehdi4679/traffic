@@ -13,6 +13,15 @@ namespace TerraficPlan.Organ {
     public partial class AfterPurches {
         
         /// <summary>
+        /// derror control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl derror;
+        
+        /// <summary>
         /// txtResult control.
         /// </summary>
         /// <remarks>
@@ -101,5 +110,14 @@ namespace TerraficPlan.Organ {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblmsg;
+        
+        /// <summary>
+        /// if1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlIframe if1;
     }
 }

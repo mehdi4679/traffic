@@ -118,6 +118,9 @@ namespace TerraficPlan.Organ
                                 cll.Comment = "OKK";
                                 EpayOrderClass.Update(cll);
                                 lblstats.Text = succeedMsg;
+                                if1.Src = "~/report/RepAfetrPamant.aspx?epayid=" + EpayOrderID.ToString();
+                                if1.Visible = true;
+
                                 //string RegMojaz = PublicFunction.RegWSmojaz(0, EpayOrderID);
                                 //if (RegMojaz != "")
                                 //    TerraficPlanBLL.Utility.ShowMsg(Page, TerraficPlanBLL.ProPertyData.MsgType.warning, RegMojaz);
@@ -127,11 +130,15 @@ namespace TerraficPlan.Organ
                         }
                         else
                         {
+                            derror.Visible = true;
+
                             TransactionChecking((int)result);
                         }
                     }
                     else
                     {
+                        derror.Visible = true;
+
                         isError = true;
                         errorMsg = "متاسفانه بانک خريد شما را تاييد نکرده است";
 

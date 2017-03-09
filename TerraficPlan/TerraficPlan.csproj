@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -25,6 +26,7 @@
     <SccProvider>SAK</SccProvider>
     <TargetFrameworkProfile />
     <UseGlobalApplicationHostFile />
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,6 +48,18 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ADODB, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>D:\00\bin\ADODB.dll</HintPath>
+    </Reference>
+    <Reference Include="FreeTextBox">
+      <HintPath>D:\00\bin\FreeTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Gma.QrCodeNet.Encoding.Net45, Version=0.4.0.0, Culture=neutral, PublicKeyToken=e8a75d24b142be49, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\QrCode.Net 0.4 Pre-Release\QrCode.Net 0.4 Pre-Release\Gma.QrCodeNet.Encoding.Net45\Gma.QrCodeNet.Encoding.Net45.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportViewer.Common.v12.12.0.0.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
@@ -64,68 +78,66 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Qr">
-      <HintPath>report\Qr.dll</HintPath>
+      <HintPath>C:\Users\User\Desktop\Qr.dll</HintPath>
     </Reference>
     <Reference Include="QRCoder">
-      <HintPath>report\QRCoder.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <Private>True</Private>
+      <HintPath>C:\Users\User\Desktop\QRCoder.dll</HintPath>
     </Reference>
     <Reference Include="Stimulsoft.Base, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Base.dll</HintPath>
+      <HintPath>D:\00\bin\Stimulsoft.Base.dll</HintPath>
     </Reference>
     <Reference Include="Stimulsoft.BusinessObjects, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.BusinessObjects.dll</HintPath>
+      <HintPath>D:\00\bin\Stimulsoft.BusinessObjects.dll</HintPath>
     </Reference>
     <Reference Include="Stimulsoft.Controls, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Controls.dll</HintPath>
+      <HintPath>D:\00\bin\Stimulsoft.Controls.dll</HintPath>
     </Reference>
     <Reference Include="Stimulsoft.Controls.Win, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Controls.Win.dll</HintPath>
+      <HintPath>D:\00\bin\Stimulsoft.Controls.Win.dll</HintPath>
     </Reference>
     <Reference Include="Stimulsoft.Database, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Database.dll</HintPath>
+      <HintPath>D:\00\bin\Stimulsoft.Database.dll</HintPath>
     </Reference>
     <Reference Include="Stimulsoft.Design, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Design.dll</HintPath>
+      <HintPath>D:\00\bin\Stimulsoft.Design.dll</HintPath>
     </Reference>
     <Reference Include="Stimulsoft.Editor, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Editor.dll</HintPath>
+      <HintPath>D:\00\bin\Stimulsoft.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Stimulsoft.Report, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Report.dll</HintPath>
+      <HintPath>D:\00\bin\Stimulsoft.Report.dll</HintPath>
     </Reference>
     <Reference Include="Stimulsoft.Report.Check, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Report.Check.dll</HintPath>
+      <HintPath>D:\00\bin\Stimulsoft.Report.Check.dll</HintPath>
     </Reference>
     <Reference Include="Stimulsoft.Report.Compare, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Report.Compare.dll</HintPath>
+      <HintPath>D:\00\bin\Stimulsoft.Report.Compare.dll</HintPath>
     </Reference>
     <Reference Include="Stimulsoft.Report.Design, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Report.Design.dll</HintPath>
+      <HintPath>D:\00\bin\Stimulsoft.Report.Design.dll</HintPath>
     </Reference>
     <Reference Include="Stimulsoft.Report.Helper, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Report.Helper.dll</HintPath>
+      <HintPath>D:\00\bin\Stimulsoft.Report.Helper.dll</HintPath>
     </Reference>
     <Reference Include="Stimulsoft.Report.Web, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Report.Web.dll</HintPath>
+      <HintPath>D:\00\bin\Stimulsoft.Report.Web.dll</HintPath>
     </Reference>
     <Reference Include="Stimulsoft.Report.Win, Version=2015.1.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Taxi\TaxiTeam\Taxi\Taxi\bin\Stimulsoft.Report.Win.dll</HintPath>
+      <HintPath>D:\00\bin\Stimulsoft.Report.Win.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Runtime.Serialization" />
@@ -333,6 +345,7 @@
     <Content Include="Controls\CtlSharjSuccess.ascx" />
     <Content Include="Controls\CtlVIN.ascx" />
     <Content Include="ErrorPage.aspx" />
+    <Content Include="Gma.QrCodeNet.Encoding.Net45.dll" />
     <Content Include="logout.aspx" />
     <Content Include="Manage\assets\avatars\avatar.png" />
     <Content Include="Manage\assets\avatars\avatar1.png" />
@@ -636,7 +649,6 @@
     <Content Include="Manage\Rep\Sale.mrt" />
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\lll.pubxml" />
-    <None Include="Properties\PublishProfiles\moham.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -697,6 +709,8 @@
     <Content Include="report\arm2.png" />
     <Content Include="report\logotrafic.jpg" />
     <Content Include="report\Mspsoft.aspx" />
+    <Content Include="report\RepAfetrPamant.aspx" />
+    <Content Include="report\ReportAfterPay.aspx" />
     <Content Include="report\StyleSheet1.css" />
     <Content Include="report\terrafic.png" />
     <Content Include="Web References\com.samanepay.acquirer\Reference.map">
@@ -1834,6 +1848,20 @@
     <Compile Include="report\Mspsoft.aspx.designer.cs">
       <DependentUpon>Mspsoft.aspx</DependentUpon>
     </Compile>
+    <Compile Include="report\RepAfetrPamant.aspx.cs">
+      <DependentUpon>RepAfetrPamant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="report\RepAfetrPamant.aspx.designer.cs">
+      <DependentUpon>RepAfetrPamant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="report\ReportAfterPay.aspx.cs">
+      <DependentUpon>ReportAfterPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="report\ReportAfterPay.aspx.designer.cs">
+      <DependentUpon>ReportAfterPay.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1869,7 +1897,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="App_Themes\Theme2\" />
-    <Folder Include="bin\" />
     <Folder Include="Models\" />
     <Folder Include="Upload\" />
   </ItemGroup>
@@ -1953,11 +1980,18 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServiceReference1\" />
   </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\typings\qrcode-generator\qrcode-generator.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>

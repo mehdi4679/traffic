@@ -564,6 +564,60 @@ cmd.Parameters.Add(new SqlParameter("RequestTrafficID", SqlDbType.Int)).Value = 
             }
 
         }
+         //---------------------------------------------------------------------------------------------------------
+           public static DataSet GetListManagerep(ClRequestTraffic c)
+        {
+
+            SqlCommand cmd = new SqlCommand("PRC_RequestTraffic_GetListManagerep", cnn);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("UserIDLog", SqlDbType.NVarChar)).Value = CSharp.PublicFunction.GetUserID();
+            cmd.Parameters.Add(new SqlParameter("IpLog", SqlDbType.NVarChar)).Value = CSharp.PublicFunction.GetIPAddress();
+            cmd.Parameters.Add(new SqlParameter("OSLog", SqlDbType.NVarChar)).Value = CSharp.PublicFunction.GetOS();
+            cmd.Parameters.Add(new SqlParameter("OSVerLog", SqlDbType.NVarChar)).Value = CSharp.PublicFunction.GetBrowser() + CSharp.PublicFunction.GetBrowserVersion();
+            cmd.Parameters.Add(new SqlParameter("URLLog", SqlDbType.NVarChar)).Value = CSharp.PublicFunction.GetURL();
+
+            cmd.Parameters.Add(new SqlParameter("RequestTrafficID", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.RequestTrafficID);
+            cmd.Parameters.Add(new SqlParameter("OwnerType", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.OwnerType);
+            cmd.Parameters.Add(new SqlParameter("TrackingCode", SqlDbType.NVarChar)).Value = Securenamespace.SecureData.CheckSecurity(c.TrackingCode);
+            cmd.Parameters.Add(new SqlParameter("DiscountType", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.DiscountType==0 ?null:c.DiscountType);
+            cmd.Parameters.Add(new SqlParameter("PersonalID", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.PersonalID);
+            cmd.Parameters.Add(new SqlParameter("CompanyID", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.CompanyID);
+            cmd.Parameters.Add(new SqlParameter("CarID", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.CarID);
+             cmd.Parameters.Add(new SqlParameter("FirtName", SqlDbType.NVarChar)).Value = Securenamespace.SecureData.CheckSecurity(c.Firstname);
+            cmd.Parameters.Add(new SqlParameter("LastName", SqlDbType.NVarChar)).Value = Securenamespace.SecureData.CheckSecurity(c.LastName);
+            cmd.Parameters.Add(new SqlParameter("FromDate", SqlDbType.NVarChar)).Value = Securenamespace.SecureData.CheckSecurity(c.fromDate);
+            cmd.Parameters.Add(new SqlParameter("ToDate", SqlDbType.NVarChar)).Value = Securenamespace.SecureData.CheckSecurity(c.ToDate);
+            cmd.Parameters.Add(new SqlParameter("Pelak", SqlDbType.NVarChar)).Value = Securenamespace.SecureData.CheckSecurity(c.Pelak);
+            cmd.Parameters.Add(new SqlParameter("RequestStatus", SqlDbType.NVarChar)).Value = Securenamespace.SecureData.CheckSecurity(c.RequestStatus);
+            cmd.Parameters.Add(new SqlParameter("MelliCode", SqlDbType.NVarChar)).Value = Securenamespace.SecureData.CheckSecurity(c.MelliCode);
+            cmd.Parameters.Add(new SqlParameter("RepeatTypeID", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.RepeatTypeID);
+
+            cmd.Parameters.Add(new SqlParameter("FRomOrderDateStart", SqlDbType.NVarChar)).Value = Securenamespace.SecureData.CheckSecurity(c.FRomOrderDateStart);
+            cmd.Parameters.Add(new SqlParameter("ToOrderDateStart", SqlDbType.NVarChar)).Value = Securenamespace.SecureData.CheckSecurity(c.ToOrderDateStart);
+            cmd.Parameters.Add(new SqlParameter("GetConfilict", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.GetConfilict);
+            cmd.Parameters.Add(new SqlParameter("EpayOrderID", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.Epayorderid);
+
+            SqlParameter prmResult = new SqlParameter("Result", SqlDbType.Int);
+            prmResult.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(prmResult);
+            DataSet ds = new DataSet();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            try
+            {
+                cnn.Open();
+                da.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                cnn.Close();
+            }
+
+        }
 
         //---------------------------------------------------------------------------------------------------------
         public static int Update(ClRequestTraffic c)

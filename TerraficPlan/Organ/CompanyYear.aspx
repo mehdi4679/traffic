@@ -97,9 +97,9 @@
 
     <input runat="server"  type="button" id="btnnpayy" onclick="f();" Text="پرداخت" value="پرداخت" class="btn" />
 <div  id="lightboxdiv" class="LightBoxDiv"  >
-<div id="lightinsert" class="Lightbox" style="padding:30px;text-align:center;position:fixed"  >
+<div id="lightinsert" class="Lightbox" style="padding:30px;text-align:center;position:fixed;height:200px"  >
  <center>
-        <fieldset style="width:300px;padding:10px">
+        <fieldset style="width:300px;padding:10px;height:150px">
         <legend>پرداخت به صورت
     <table style="text-align:center">
         <tr><td><asp:RadioButton runat="server" ID="rdonline" Checked="true" GroupName ="epaygrooup" Text="آنلاین"/></td><td colspan="10"></td></tr>
