@@ -74,7 +74,7 @@ namespace TerraficPlan.report
 
                 HtmlGenericControl c = new HtmlGenericControl("center");
                 c.ID = "c";
-                c.Style.Add(" margin-top", "-50px");
+                c.Style.Add("margin-top", "80px");
 
                 divbody.Controls.Add(c);
                 printablediv.Controls.Add(divhead);
