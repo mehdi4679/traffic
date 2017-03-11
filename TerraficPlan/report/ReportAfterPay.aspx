@@ -28,26 +28,36 @@
     <div id="printablediv" runat="server">
        
         </div>
-<script  type="text/javascript">
-        function printDiv(divID) {
-            //Get the HTML of div
-            var divElements = document.getElementById(divID).innerHTML;
-            //Get the HTML of whole page
-            var oldPage = document.body.innerHTML;
+<script type='text/javascript'>
+ var originalContents;
+ function printDiv() {
 
-            //Reset the page's HTML with div's HTML only
-            document.body.innerHTML = 
-              "<html><head><title></title></head><body>" + 
-              divElements + "</body>";
-
-            //Print Page
-            window.print();
-
-            //Restore orignal HTML
-            document.body.innerHTML = oldPage;
-
-          
+        if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+            var DocumentContainer = document.getElementById('printablediv');
+            var WindowObject = window.open('', "PrintWindow", "width=800,height=750left=0,top=0,toolbar=0,scrollbars=0,status=0");
+            WindowObject.document.writeln(DocumentContainer.innerHTML);
+            WindowObject.document.close();
+            WindowObject.focus();
+            WindowObject.print();
+            WindowObject.close();
         }
-      
-    </script>
+        else {
+            originalContents = document.body.innerHTML;
+            var printable = document.getElementById('printablediv');
+            document.body.innerHTML = printable.innerHTML;
+            printCoupon();
+        }
+    }
+
+    function printCoupon() {
+        window.print();
+        endPrintCoupon();
+    }
+
+    function endPrintCoupon() {
+        document.body.innerHTML = originalContents;
+        document.getElementById('printablediv').scrollIntoView(true);
+        location.reload();
+    }
+ </script>
 </asp:Content>
