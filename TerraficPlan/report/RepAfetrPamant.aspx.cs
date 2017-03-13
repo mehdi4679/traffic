@@ -44,6 +44,12 @@ namespace TerraficPlan.report
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 DataRow dr = ds.Tables[0].Rows[i];
+
+                HtmlGenericControl divkol = new HtmlGenericControl("div");
+                divkol.ID = "divkol" + i;
+                divkol.Attributes.Add("clear", "all");
+                divkol.Style.Add("page-break-after", "always");
+
                 HtmlGenericControl divhead = new HtmlGenericControl("div");
                 divhead.ID = "divheaad" + i;
 
@@ -65,12 +71,12 @@ namespace TerraficPlan.report
                 divbody.InnerHtml = "<img id='img" + i + "' src='trafic.png' height='512' width='610' style='position:absolute;z-index:-1;'/><p class='auto-style1'><strong>&nbsp ریاست محترم پلیس راهنمایی و رانندگی استان قم</strong><p style = 'font-size: small'>&nbsp;&nbspسلام علیکم<p style= 'font-size: small' >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp " +
                     "با احترام بدینوسیله گواهی می گردد برای خودروی #Carname به شماره پلاک ایران #prlak &nbsp; &nbsp&nbsp&nbsp&nbsp&nbspاز طریق سامانه مرکز مدیریت هوشمند ترافیک، اقدام به صدور مجوز&nbsp ورود&nbspبه محدوده طرح ترافیک هسته &nbsp&nbsp&nbsp&nbsp&nbspمرکزی شهر قم ازتاریخ #FromDate &nbsp لغایت #ToDate &nbsp گردیده است.<p style= 'font-size: small' >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspاین گواهی بنا به درخواست مالک محترم خودرو برای تردد در محدوده طرح ترافیک هسته&nbsp;مرکزی &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp; &nbsp&nbsp&nbsp&nbsp&nbsp;شهر(به استثناء خطوط ویژه) صادر شده و ارزش دیگری ندارد.<p style= 'font-size: small' >&nbsp<p style = 'font-size: small' >" +
                   "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp<p style = 'font-size: small' >" +
-                   "</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspمرکز مدیریت هوشمند ترافیک";
+                   "</br></br></br></br></br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspمرکز مدیریت هوشمند ترافیک";
                  // "<p style= 'font-size: small' >&nbsp<p style = 'font-size: small' >&nbsp";
                 // "<center>"+"<asp:PlaceHolder ID = 'plBarCode' runat='server' /></center>";
                 HtmlGenericControl c = new HtmlGenericControl("center");
                 c.ID = "c";
-                c.Style.Add("margin-top", "80px");
+                c.Style.Add("margin-top", "10px");
 
 
                 divbody.InnerHtml = divbody.InnerHtml.ToString().Replace(@"#prlak", dr["prlak"].ToString());
@@ -79,12 +85,6 @@ namespace TerraficPlan.report
                 divbody.InnerHtml = divbody.InnerHtml.ToString().Replace(@"#ToDate", dr["ToDate"].ToString());
 
 
-                divbody.Controls.Add(c);
-                printablediv.Controls.Add(divhead);
-                printablediv.Controls.Add(divbody);
-
-                divhead.InnerHtml = divhead.InnerHtml.ToString().Replace(@"#Date", dr["Date"].ToString());
-                divhead.InnerHtml = divhead.InnerHtml.ToString().Replace(@"#Code", dr["Code"].ToString());
 
                 string code = "کد رهگیری: " + dr["Code"].ToString() + " شماره پلاک: " + dr["prlak"].ToString() + " نام خودرو: " + dr["Carname"].ToString() + " از تاریخ: " + dr["FromDate"].ToString() + " تا تاریخ: " + dr["ToDate"].ToString();
                 QRCodeGenerator qrGenerator = new QRCodeGenerator();
@@ -104,6 +104,21 @@ namespace TerraficPlan.report
                 }
 
 
+
+                divbody.Controls.Add(c);
+
+
+                divhead.InnerHtml = divhead.InnerHtml.ToString().Replace(@"#Date", dr["Date"].ToString());
+                divhead.InnerHtml = divhead.InnerHtml.ToString().Replace(@"#Code", dr["Code"].ToString());
+
+
+
+
+                divkol.Controls.Add(divhead);
+                divkol.Controls.Add(divbody);
+                //divkol.Controls.Add(plbar);
+
+                printablediv.Controls.Add(divkol);
 
 
             }
