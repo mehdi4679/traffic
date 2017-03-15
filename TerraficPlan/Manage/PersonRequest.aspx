@@ -49,7 +49,7 @@
 
           <fieldset style="padding:30px"><legend>درخواست های ثبت شده</legend>  
               <asp:DropDownList runat="server" ID="ddDefauleYear" AutoPostBack="True" OnSelectedIndexChanged="ddDefauleYear_SelectedIndexChanged" ></asp:DropDownList>
-              <asp:GridView CssClass="gv" AutoGenerateColumns="false" runat="server" ID="grid1" AllowPaging="true" AllowSorting="true" OnPageIndexChanging="grid1_PageIndexChanging" OnSorting="grid1_Sorting">
+              <asp:GridView CssClass="gv" AutoGenerateColumns="false" runat="server" ID="grid1" AllowPaging="true" AllowSorting="true" OnPageIndexChanging="grid1_PageIndexChanging" OnSorting="grid1_Sorting" OnSelectedIndexChanging="grid1_SelectedIndexChanging"  >
                   <Columns>
                 <asp:TemplateField HeaderText="ردیف">
             <ItemTemplate>
@@ -64,10 +64,10 @@
 
             <asp:BoundField DataField="CompanyName"  HeaderText="نهاد"   SortExpression="CompanyName" />
 <%--            <asp:BoundField DataField="DiscountTypeName"  HeaderText="تخفیف"   SortExpression="DiscountTypeName" />--%>
-<asp:TemplateField HeaderText="کل درخواست ها"   SortExpression="c"><ItemTemplate><a href='<%# "/Manage/Manage.aspx?sid=-1&pid="+ Eval("pid").ToString() +"&companyID="+ Eval("CompanyIDdd").ToString()  %>'    > <%#Eval("c").ToString() %> </a></ItemTemplate></asp:TemplateField>     
-<asp:TemplateField HeaderText="در انتظار"   SortExpression="DarEntezar"><ItemTemplate><a href='<%#"/Manage/Manage.aspx?sid=0&pid=" + Eval("pid") +"&companyID="+ Eval("CompanyIDdd").ToString() %>'       > <%#Eval("DarEntezar").ToString() %> </a></ItemTemplate></asp:TemplateField>     
-<asp:TemplateField HeaderText="تایید شده"   SortExpression="taeeidshode"><ItemTemplate><a href='<%#"/Manage/Manage.aspx?sid=1&pid="+ Eval("pid") +"&companyID="+ Eval("CompanyIDdd").ToString() %>'      > <%#Eval("taeeidshode").ToString() %> </a></ItemTemplate></asp:TemplateField>     
-    <asp:TemplateField HeaderText="رد شده"   SortExpression="radshodeh"><ItemTemplate><a href='<%#"/Manage/Manage.aspx?sid=2&pid="+ Eval("pid") +"&companyID="+ Eval("CompanyIDdd").ToString() %>'     > <%#Eval("radshodeh").ToString() %> </a></ItemTemplate></asp:TemplateField>     
+<asp:TemplateField HeaderText="کل درخواست ها"   SortExpression="c"><ItemTemplate><a href='<%# "/Manage/Manage.aspx?sid=-1&pid="+ Eval("pid").ToString() +"&companyID="+ Eval("CompanyIDdd").ToString()+"&yearID="+ddDefauleYear.Text %>'    > <%#Eval("c").ToString() %> </a></ItemTemplate></asp:TemplateField>     
+<asp:TemplateField HeaderText="در انتظار"   SortExpression="DarEntezar" ><ItemTemplate><a  href='<%#"/Manage/Manage.aspx?sid=0&pid=" + Eval("pid") +"&companyID="+ Eval("CompanyIDdd").ToString()+"&yearID="+ddDefauleYear.Text %>'     > <%#Eval("DarEntezar").ToString() %> </a></ItemTemplate></asp:TemplateField>     
+<asp:TemplateField HeaderText="تایید شده"   SortExpression="taeeidshode"><ItemTemplate><a href='<%#"/Manage/Manage.aspx?sid=1&pid="+ Eval("pid") +"&companyID="+ Eval("CompanyIDdd").ToString()+"&yearID="+ddDefauleYear.Text %>'      > <%#Eval("taeeidshode").ToString() %> </a></ItemTemplate></asp:TemplateField>     
+    <asp:TemplateField HeaderText="رد شده"   SortExpression="radshodeh"><ItemTemplate><a href='<%#"/Manage/Manage.aspx?sid=2&pid="+ Eval("pid") +"&companyID="+ Eval("CompanyIDdd").ToString()+"&yearID="+ddDefauleYear.Text %>'     > <%#Eval("radshodeh").ToString() %> </a></ItemTemplate></asp:TemplateField>     
                   
                      <%-- 
                              <asp:BoundField DataField="c"  HeaderText="کل درخواست ها"   SortExpression="c" />

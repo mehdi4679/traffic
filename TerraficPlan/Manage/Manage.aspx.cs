@@ -37,22 +37,39 @@ namespace TerraficPlan.Manage
             cl.Pelak = CtlPelak.Text.Length > 5 ? CtlPelak.Text : null;
             cl.CompanyID =Convert.ToInt32( ddcompany.SelectedValue);
             cl.MelliCode = nationalCode.Text;
+            cl.visitdate= Convert.ToInt32(ddDefauleYear.SelectedValue);
 
             if (ddRequestStatus.SelectedValue == "-1")
                 cl.RequestStatus = null;
             else
             cl.RequestStatus = Convert.ToInt32(ddRequestStatus.SelectedValue)   ;
 
-
-            DataSet ds = RequestTrafficClass.GetListManage(cl);
-            DataView dv = new DataView(ds.Tables[0]);
-            if (ViewState["RequestTraffic"] == null)
+            if (Convert.ToInt32(ddDefauleYear.SelectedValue) == 0)
             {
-                ViewState["RequestTraffic"] = "RequestTrafficID Desc";
+                DataSet ds = RequestTrafficClass.GetListManage(cl);
+                DataView dv = new DataView(ds.Tables[0]);
+                if (ViewState["RequestTraffic"] == null)
+                {
+                    ViewState["RequestTraffic"] = "RequestTrafficID Desc";
+                }
+                dv.Sort = Securenamespace.SecureData.CheckSecurity(ViewState["RequestTraffic"].ToString()).ToString();
+                GridView1.DataSource = dv;
+                GridView1.DataBind();
             }
-            dv.Sort = Securenamespace.SecureData.CheckSecurity(ViewState["RequestTraffic"].ToString()).ToString();
-            GridView1.DataSource = dv;
-            GridView1.DataBind();
+            else
+            {
+                DataSet ds = RequestTrafficClass.GetListManage_inyear(cl);
+                DataView dv = new DataView(ds.Tables[0]);
+                if (ViewState["RequestTraffic"] == null)
+                {
+                    ViewState["RequestTraffic"] = "RequestTrafficID Desc";
+                }
+                dv.Sort = Securenamespace.SecureData.CheckSecurity(ViewState["RequestTraffic"].ToString()).ToString();
+                GridView1.DataSource = dv;
+                GridView1.DataBind();
+            }
+            
+            
         }
         protected void gridview1_PageIndexChanging(object sender, System.Web.UI.WebControls.GridViewPageEventArgs e)
         {
@@ -64,6 +81,35 @@ namespace TerraficPlan.Manage
         {
             if (!Page.IsPostBack)
             {
+                    ClCatalog cl2 = new ClCatalog();
+                    cl2.CatalogTypeID = Convert.ToInt32("101");
+
+                    DataSet ds1 = CatalogClass.GetList(cl2);
+
+                    ddDefauleYear.DataSource = ds1;
+                    ddDefauleYear.DataTextField = "CatalogName";
+                    ddDefauleYear.DataValueField = "CatalogValue";
+
+                    ddDefauleYear.DataBind();
+
+                    ds1.Dispose();
+                ddDefauleYear.Items.Add("همه موارد");
+                ddDefauleYear.Items[2].Value = "0";
+
+                if (Request.QueryString["yearID"] != null)
+                {
+                    ddDefauleYear.SelectedValue = Request.QueryString["yearID"].ToString();
+                    ddDefauleYear.Text = Request.QueryString["yearID"].ToString(); ;
+
+                }
+
+
+
+
+
+
+
+
                 ClPersonal cl = new ClPersonal();
                 cl.PersonalID = Convert.ToInt32(Session["PersonalID"].ToString());
 
@@ -95,6 +141,10 @@ namespace TerraficPlan.Manage
 
              
             }
+
+            else
+            { ddDefauleYear.Text = ddDefauleYear.SelectedValue; }
+
         }
 
         private void SetNameAndFamil(int pid)
@@ -262,6 +312,12 @@ namespace TerraficPlan.Manage
         protected void ANazar_ServerClick(object sender, EventArgs e)
         {
 
+        }
+
+        protected void ddDefauleYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ddDefauleYear.Text = ddDefauleYear.SelectedValue;
+            BindGrid();
         }
     }
 }

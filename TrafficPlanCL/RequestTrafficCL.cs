@@ -119,7 +119,22 @@ public string ToDate
     get { return _ToDate; }
     set { _ToDate = value; }
 }
-private string _FirstName;
+
+
+
+
+        private int? _visitdate;
+        public int? visitdate
+        {
+            get { return _visitdate; }
+            set { _visitdate = value; }
+        }
+
+
+
+
+
+        private string _FirstName;
 public string Firstname
 {
     get { return _FirstName; }

@@ -90,6 +90,12 @@ namespace TerraficPlan.Manage
         {
             ddDefauleYear.Text = ddDefauleYear.SelectedValue;
             BindGrid();
+            
+        }
+
+        protected void grid1_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+
         }
     }
 }
